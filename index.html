@@ -24,6 +24,44 @@
         </nav>
     </header>
 
+    <script>
+        window.addEventListener('load', () => {
+            document.getElementById('loader').style.display = 'none';
+            document.body.classList.remove('loading');
+        });
+    </script>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                document.body.classList.add('scroll-active');
+            } else {
+                document.body.classList.remove('scroll-active');
+            }
+        });
+    </script>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.testimonial-item');
+        const totalSlides = slides.length;
+        
+        function showNextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            slides.forEach((slide, index) => {
+                slide.style.transform = `translateX(${100 * (index - currentSlide)}%)`;
+            });
+        }
+        
+        setInterval(showNextSlide, 5000); // Change slide every 5 seconds
+        </script>
+        
+    
+    <a href="#" id="back-to-top" class="back-to-top">Top</a>
+        
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+    
     <section id="hero">
         <div class="hero-content">
             <h1>Innovating Technology for Your Business</h1>
@@ -58,7 +96,20 @@
             </div>
         </div>
     </section>
-
+    <section id="testimonials" class="section">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-carousel">
+            <div class="testimonial-item">
+                <p>"NELTY LLC helped us automate our processes. Excellent service!"</p>
+                <h3>- John Doe, CEO of Tech Corp</h3>
+            </div>
+            <div class="testimonial-item">
+                <p>"The team provided great IT consulting and tailored solutions for our business."</p>
+                <h3>- Jane Smith, Founder of DataInsights</h3>
+            </div>
+        </div>
+    </section>
+    
     <section id="contact" class="section">
         <h2>Contact Us</h2>
         <p>We would love to hear from you! Feel free to get in touch with us for any queries or to discuss how we can help your business grow.</p>
