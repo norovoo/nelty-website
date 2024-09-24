@@ -130,6 +130,13 @@ p {
     transform: translateY(-10px);
 }
 
+.logo-container img {
+    width: auto;   /* Automatically adjusts width based on the height */
+    height: 80px;  /* Set a fixed height (adjust as needed) */
+    max-width: 100%; /* Ensures the logo doesn’t overflow its container */
+    object-fit: contain; /* Ensures the image scales without distortion */
+}
+
 .card h3 {
     font-size: 1.5rem;
     color: #333;
