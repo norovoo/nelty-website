@@ -1,296 +1,139 @@
-/* Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
-    background: #f7f8fc;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f0f7;
     color: #333;
-    line-height: 1.6;
 }
 
+/* Header */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: linear-gradient(90deg, #4b2cbf, #8a2be2);
-    padding: 10px 20px;
-    color: white;
+    background-color: #6a0dad; /* Dark purple */
+    padding: 20px;
 }
 
-.logo-container img {
+header .logo-container img {
     width: 150px;
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
     display: flex;
-}
-
-nav ul li {
-    margin-left: 20px;
+    justify-content: space-around;
 }
 
 nav ul li a {
-    color: white;
+    color: #fff;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #ffcc00;
+    color: #d8b3ff; /* Light purple hover effect */
+}
+
+/* Loader */
+#loader .spinner {
+    border: 8px solid #d8b3ff; /* Light purple */
+    border-top: 8px solid #6a0dad; /* Dark purple */
 }
 
 /* Hero Section */
 #hero {
-    height: 80vh;
-    background: linear-gradient(135deg, #4b2cbf, #8a2be2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #7d3c98; /* Medium purple */
+    color: #fff;
+    position: relative;
+    padding: 80px 0;
     text-align: center;
-    color: white;
 }
 
-.hero-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+.hero-content {
+    position: relative;
 }
 
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+.hero-banner {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
 }
 
 .cta-btn {
-    background: #ffcc00;
+    background-color: #6a0dad;
+    color: white;
     padding: 10px 20px;
-    color: #4b2cbf;
-    border: none;
+    text-decoration: none;
     border-radius: 5px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .cta-btn:hover {
-    background: #ff9900;
+    background-color: #4e008e; /* Darker purple on hover */
 }
 
-/* Sections */
-.section {
-    padding: 40px 20px;
+/* Section Titles */
+.section h2 {
+    color: #6a0dad;
     text-align: center;
-}
-
-#about {
-    background: #fff;
-}
-
-#services {
-    background: #f0f0f0;
-}
-
-h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #4b2cbf;
-}
-
-p {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 20px;
 }
 
 /* Service Cards */
 .service-cards {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
 }
 
 .card {
-    background: white;
+    background-color: #d8b3ff; /* Light purple */
+    padding: 20px;
+    border-radius: 8px;
+    width: 22%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card h3 {
+    color: #6a0dad;
+}
+
+/* Testimonial Section */
+#testimonials .testimonial-item {
+    background-color: #f2e5ff; /* Lightest purple */
+    padding: 20px;
+    margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    padding: 20px;
-    margin: 15px;
-    text-align: left;
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-}
-
-.logo-container img {
-    width: auto;   /* Automatically adjusts width based on the height */
-    height: 80px;  /* Set a fixed height (adjust as needed) */
-    max-width: 100%; /* Ensures the logo doesn’t overflow its container */
-    object-fit: contain; /* Ensures the image scales without distortion */
-}
-
-#hero {
-    background-image: url('images/hero-background.jpg'); /* Add your hero image */
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-#hero h1 {
-    color: white;
-    font-size: 48px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-#hero p {
-    color: white;
-    font-size: 24px;
-}
-
-.cta-btn {
-    padding: 10px 20px;
-    background-color: #ff6347;
-    color: white;
-    text-transform: uppercase;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-.testimonial-carousel {
-    display: flex;
-    overflow: hidden;
-}
-
-.testimonial-item {
-    min-width: 100%;
-    transition: transform 0.5s ease;
-    text-align: center;
-    padding: 20px;
-}
-
-.testimonial-item p {
-    font-size: 18px;
-    color: #555;
-}
-
-.testimonial-item h3 {
-    font-size: 16px;
-    color: #333;
-}
-
-.cta-btn:hover {
-    background-color: #ff4500;
-    transform: scale(1.1);
-}
-.card {
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#loader {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.spinner {
-    border: 5px solid #f3f3f3;
-    border-top: 5px solid #3498db;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-body.loading {
-    overflow: hidden;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-
-.card h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.card p {
-    font-size: 16px;
-}
-html {
-    scroll-behavior: smooth;
-}
-
-
-.card h3 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.card p {
-    font-size: 1rem;
-    color: #777;
-}
-
-/* Contact Section */
-.contact-info {
-    list-style: none;
-}
-
-.contact-info li {
-    margin-bottom: 10px;
-}
-
-.contact-info a {
-    color: #4b2cbf;
-    text-decoration: none;
-}
-
-.contact-info a:hover {
-    text-decoration: underline;
-}
-.white-text {
-    color: white;
 }
 
 /* Footer */
 footer {
-    background: #333;
+    background-color: #6a0dad;
     color: white;
     text-align: center;
+    padding: 20px;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    background-color: #6a0dad;
+    color: white;
     padding: 10px;
-    margin-top: 40px;
+    text-align: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+}
+
+.back-to-top:hover {
+    background-color: #4e008e;
 }
