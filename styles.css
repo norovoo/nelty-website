@@ -56,6 +56,23 @@ nav ul li a:hover {
     width: 100%;
     height: auto;
     display: block;
+    background-color: #3498db; /* Change this to your logo color */
+    color: white; /* Text color for contrast */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#hero h1, #hero p {
+    color: white; /* Ensure text is readable on the colored background */
+}
+
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
 .hero-text-overlay {

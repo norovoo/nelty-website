@@ -7,6 +7,93 @@
     <title>NELTY LLC | IT Consulting</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Add your hero section background color here */
+        #hero {
+            background-color: #3498db; /* Replace with your logo color */
+            color: white; /* Ensure text is readable */
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .white-text {
+            color: white;
+        }
+
+        /* Other styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo-container img {
+            width: 150px; /* Adjust logo size as needed */
+        }
+
+        .section {
+            padding: 50px 20px;
+        }
+
+        .cta-btn {
+            background-color: #e67e22; /* Call to action button color */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: #d35400; /* Darker shade on hover */
+        }
+
+        /* Loader styles */
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .spinner {
+            border: 8px solid #f3f3f3; /* Light grey */
+            border-top: 8px solid #3498db; /* Logo color */
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Back to top button styles */
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background-color: #3498db; /* Same color as logo */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+    </style>
 </head>
 <body class="loading">
     <header>
@@ -23,8 +110,38 @@
             </ul>
         </nav>
     </header>
+    <script>
+        window.addEventListener('load', () => {
+            document.getElementById('loader').style.display = 'none';
+            document.body.classList.remove('loading');
+        });
 
-    <!-- Loader Animation -->
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                document.body.classList.add('scroll-active');
+                document.getElementById('back-to-top').style.display = 'block';
+            } else {
+                document.body.classList.remove('scroll-active');
+                document.getElementById('back-to-top').style.display = 'none';
+            }
+        });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.testimonial-item');
+        const totalSlides = slides.length;
+        
+        function showNextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            slides.forEach((slide, index) => {
+                slide.style.transform = `translateX(${100 * (index - currentSlide)}%)`;
+            });
+        }
+        
+        setInterval(showNextSlide, 5000); // Change slide every 5 seconds
+    </script>
+
+    <a href="#" id="back-to-top" class="back-to-top">Top</a>
+        
     <div id="loader">
         <div class="spinner"></div>
     </div>
@@ -38,6 +155,9 @@
                 <p class="white-text">Leading in IT Consulting, Data, AI, ML, and Software Development</p>
                 <a href="#services" class="cta-btn">Explore Services</a>
             </div>
+            <h1 class="white-text">Innovating Technology for Your Business</h1>
+            <p class="white-text">Leading in IT Consulting, Data, AI, ML, and Software Development</p>
+            <a href="#services" class="cta-btn">Explore Services</a>
         </div>
     </section>
 
@@ -73,7 +193,7 @@
         <div class="testimonial-carousel">
             <div class="testimonial-item">
                 <p>"NELTY LLC helped us automate our processes. Excellent service!"</p>
-                <h3>- John Doe, CEO of Tech Corp</h3>
+                <h3>- Norovdorj Otgonbayar, CEO of Tech Corp</h3>
             </div>
             <div class="testimonial-item">
                 <p>"The team provided great IT consulting and tailored solutions for our business."</p>
