@@ -95,13 +95,13 @@
         }
     </style>
 </head>
-<body>
+<body class="loading">
     <header>
         <div class="logo-container">
             <a href="/">
-                <img src="images/nelty-logo.png" alt="NELTY Logo">
+                <img src="images/nelty-logo.png" alt="NELTY Logo" />
             </a>
-        </div>        
+        </div>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
@@ -110,7 +110,6 @@
             </ul>
         </nav>
     </header>
-
     <script>
         window.addEventListener('load', () => {
             document.getElementById('loader').style.display = 'none';
@@ -146,9 +145,16 @@
     <div id="loader">
         <div class="spinner"></div>
     </div>
-    
+
+    <!-- Hero Section with Purple Banner -->
     <section id="hero">
         <div class="hero-content">
+            <img src="images/nelty-banner.png" alt="NELTY IT Solutions Banner" class="hero-banner">
+            <div class="hero-text-overlay">
+                <h1>Innovating Technology for Your Business</h1>
+                <p class="white-text">Leading in IT Consulting, Data, AI, ML, and Software Development</p>
+                <a href="#services" class="cta-btn">Explore Services</a>
+            </div>
             <h1 class="white-text">Innovating Technology for Your Business</h1>
             <p class="white-text">Leading in IT Consulting, Data, AI, ML, and Software Development</p>
             <a href="#services" class="cta-btn">Explore Services</a>
@@ -195,7 +201,7 @@
             </div>
         </div>
     </section>
-    
+
     <section id="contact" class="section">
         <h2>Contact Us</h2>
         <p>We would love to hear from you! Feel free to get in touch with us for any queries or to discuss how we can help your business grow.</p>
@@ -208,5 +214,37 @@
     <footer>
         <p>&copy; 2024 NELTY LLC. All Rights Reserved.</p>
     </footer>
+
+    <!-- Scroll to top button -->
+    <a href="#" id="back-to-top" class="back-to-top">Top</a>
+
+    <!-- JS Scripts -->
+    <script>
+        window.addEventListener('load', () => {
+            document.getElementById('loader').style.display = 'none';
+            document.body.classList.remove('loading');
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                document.body.classList.add('scroll-active');
+            } else {
+                document.body.classList.remove('scroll-active');
+            }
+        });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.testimonial-item');
+        const totalSlides = slides.length;
+        
+        function showNextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            slides.forEach((slide, index) => {
+                slide.style.transform = `translateX(${100 * (index - currentSlide)}%)`;
+            });
+        }
+        
+        setInterval(showNextSlide, 5000); // Change slide every 5 seconds
+    </script>
 </body>
 </html>
