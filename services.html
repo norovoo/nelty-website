@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Explore Services | NELTY LLC</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+
+        header {
+            background-color: #563d7c; /* Dark Purple */
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .section {
+            padding: 60px 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .section h1 {
+            color: #563d7c; /* Dark Purple */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .service-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: calc(50% - 40px);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-button {
+            background-color: #563d7c; /* Dark Purple */
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .service-button:hover {
+            background-color: #452a5b; /* Lighter Purple */
+        }
+
+        form {
+            margin-top: 40px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        form input, form select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #563d7c; /* Dark Purple */
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        form button:hover {
+            background-color: #452a5b; /* Lighter Purple */
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: #563d7c; /* Dark Purple */
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="/">
+                <img src="images/nelty-logo.png" alt="NELTY Logo" style="max-width: 200px;">
+            </a>
+        </div>        
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="services" class="section">
+        <div class="container">
+            <h1>Our Services</h1>
+            <p style="text-align: center;">At NELTY LLC, we provide a range of IT solutions designed to meet your business needs.</p>
+
+            <div class="service-cards">
+                <div class="card">
+                    <h3>IT Consulting</h3>
+                    <p>Expert guidance to help you navigate your IT strategy and infrastructure needs.</p>
+                    <button class="service-button" onclick="scheduleAppointment('IT Consulting')">Schedule Appointment</button>
+                </div>
+                <div class="card">
+                    <h3>Data Management</h3>
+                    <p>End-to-end data solutions to manage, analyze, and secure your business data.</p>
+                    <button class="service-button" onclick="scheduleAppointment('Data Management')">Schedule Appointment</button>
+                </div>
+                <div class="card">
+                    <h3>AI & ML</h3>
+                    <p>Innovative AI and machine learning solutions to automate and optimize your processes.</p>
+                    <button class="service-button" onclick="scheduleAppointment('AI & ML')">Schedule Appointment</button>
+                </div>
+                <div class="card">
+                    <h3>Software Development</h3>
+                    <p>Custom software development services to turn your ideas into reality.</p>
+                    <button class="service-button" onclick="scheduleAppointment('Software Development')">Schedule Appointment</button>
+                </div>
+            </div>
+
+            <h2 style="text-align: center;">Payment Options</h2>
+            <p style="text-align: center;">Select your preferred payment method below:</p>
+            <form id="payment-form" style="max-width: 400px; margin: auto;">
+                <label for="payment-method">Choose a payment method:</label>
+                <select id="payment-method" name="payment-method">
+                    <option value="credit-card">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="bank-transfer">Bank Transfer</option>
+                </select>
+                <button type="submit">Proceed to Payment</button>
+            </form>
+
+            <h2 style="text-align: center;">Schedule an Appointment</h2>
+            <p style="text-align: center;">Fill out the form below to schedule an appointment with us:</p>
+            <form id="appointment-form" style="max-width: 400px; margin: auto;">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="service">Select Service:</label>
+                <select id="service" name="service">
+                    <option value="IT Consulting">IT Consulting</option>
+                    <option value="Data Management">Data Management</option>
+                    <option value="AI & ML">AI & ML</option>
+                    <option value="Software Development">Software Development</option>
+                </select>
+
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Preferred Time:</label>
+                <input type="time" id="time" name="time" required>
+
+                <button type="submit">Schedule Appointment</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 NELTY LLC. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Schedule appointment function
+        function scheduleAppointment(service) {
+            document.getElementById('appointment-form').querySelector('select[name="service"]').value = service;
+            document.getElementById('appointment-form').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Handle form submissions
+        document.getElementById('payment-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Payment processed for ' + this.payment-method.value);
+        });
+
+        document.getElementById('appointment-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Appointment scheduled for ' + this.name.value + ' on ' + this.date.value + ' at ' + this.time.value);
+        });
+    </script>
+</body>
+</html>
