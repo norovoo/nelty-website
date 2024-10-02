@@ -36,7 +36,7 @@
       }
 
       #hero {
-        background-image: url("images/high-resolution-banner.png"); /* Replace with your high-res banner image */
+        background-image: url("images/banner-1.jpg"); /* Replace with your high-res banner image */
         background-size: cover;
         background-position: center;
         height: 400px;
@@ -46,6 +46,7 @@
         text-align: center;
         color: white;
         position: relative;
+        transition: background-image 1s ease-in-out;
       }
 
       #hero::after {
@@ -212,5 +213,24 @@
           behavior: "smooth",
         });
       });
+
+    let currentImageIndex = 0;
+    const images = [
+      'url("images/banner-1.jpg")',
+      'url("images/banner-2.png")',
+      'url("images/banner-3.png")',
+    ];
+
+    function changeBackground() {
+      const heroSection = document.getElementById("hero");
+      heroSection.style.backgroundImage = images[currentImageIndex];
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+    }
+
+    // Change the background image every 5 seconds
+    setInterval(changeBackground, 5000);
+
+    // Initially set the first image
+    window.onload = changeBackground;
   </script>
 </html>
