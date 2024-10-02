@@ -20,13 +20,19 @@
       }
 
       header {
-        background-color: #563d7c; /* Dark Purple */
-        color: white;
+        background-color: #3b5998; /* Blue color */
+        color: rgb(255, 255, 255);
         padding: 15px 0;
-        text-align: center;
         position: sticky;
         top: 0;
         z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo-container {
+        margin-right: auto;
       }
 
       header a {
@@ -39,7 +45,7 @@
         background-image: url("images/banner-1.jpg"); /* Replace with your high-res banner image */
         background-size: cover;
         background-position: center;
-        height: 400px;
+        height: 460px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -56,12 +62,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: rgba(
-          0,
-          0,
-          0,
-          0.5
-        ); /* Dark overlay for better text contrast */
+        background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better text contrast */
         z-index: 1;
       }
 
@@ -150,7 +151,7 @@
           <img
             src="images/nelty-logo.png"
             alt="NELTY Logo"
-            style="max-width: 200px"
+            style="max-width: 80px"
           />
         </a>
       </div>
