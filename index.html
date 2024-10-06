@@ -17,32 +17,46 @@
         padding: 0;
         background-color: #f4f4f4;
         color: #333;
+        scroll-behavior: smooth;
       }
 
       header {
         background-color: #3b5998; /* Blue color */
-        color: rgb(255, 255, 255);
+        color: #fff;
         padding: 15px 0;
         position: sticky;
         top: 0;
         z-index: 1000;
         display: flex;
-        align-items: center;
         justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
 
-      .logo-container {
-        margin-right: auto;
+      header .logo-container img {
+        max-width: 80px;
       }
 
-      header a {
-        color: white;
-        text-decoration: none;
+      header nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+
+      header nav ul li {
         margin: 0 15px;
       }
 
+      header nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      /* Hero Section */
       #hero {
-        background-image: url("images/banner-1.jpg"); /* Replace with your high-res banner image */
+        background-image: url("images/banner-1.jpg");
         background-size: cover;
         background-position: center;
         height: 460px;
@@ -52,7 +66,8 @@
         text-align: center;
         color: white;
         position: relative;
-        transition: background-image 1s ease-in-out;
+        transition: opacity 1s ease-in-out;
+        opacity: 1;
       }
 
       #hero::after {
@@ -62,7 +77,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better text contrast */
+        background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
         z-index: 1;
       }
 
@@ -82,41 +97,56 @@
       }
 
       .cta-btn {
-        background-color: #f39c12; /* Accent color for the button */
+        background-color: #f39c12;
         color: white;
         padding: 10px 20px;
         border-radius: 5px;
         text-decoration: none;
         font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+
+      .cta-btn:hover {
+        background-color: #d35400;
       }
 
       .section {
         padding: 60px 20px;
-        max-width: 800px;
+        max-width: 1600px;
         margin: auto;
         text-align: center;
+        opacity: 0; /* Initial opacity */
+        transition: opacity 0.6s ease-in-out;
       }
 
-      .section h2 {
-        margin-bottom: 20px;
-        color: #563d7c; /* Dark Purple */
+      .section img {
+        max-width: 90%;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin: 20px auto
+      }
+
+      .visible {
+        opacity: 1;
       }
 
       footer {
+        background-color: #563d7c;
+        color: white;
         text-align: center;
         padding: 15px 0;
-        background-color: #563d7c; /* Dark Purple */
-        color: white;
         position: relative;
-        bottom: 0;
         width: 100%;
+        box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
       }
 
+      /* Back to Top Button */
       #backToTop {
         position: fixed;
         bottom: 50px;
         right: 20px;
         z-index: 100;
+        display: none;
       }
 
       .back-to-top-btn {
@@ -126,16 +156,43 @@
         border-radius: 15px;
         text-decoration: none;
         font-weight: bold;
-        display: block;
       }
 
-      @media (max-width: 600px) {
+      /* Media Queries */
+      @media (max-width: 768px) {
+        .hero-content h1 {
+          font-size: 2.5rem;
+        }
+
+        .hero-content p {
+          font-size: 1rem;
+        }
+
+        header nav ul {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        header nav ul li {
+          margin: 10px 0;
+        }
+
+        .section {
+          padding: 40px 20px;
+        }
+
+        .section img {
+          max-width: 90%;
+        }
+      }
+
+      @media (max-width: 480px) {
         .hero-content h1 {
           font-size: 2rem;
         }
 
         .hero-content p {
-          font-size: 1rem;
+          font-size: 0.9rem;
         }
 
         .cta-btn {
@@ -144,6 +201,7 @@
       }
     </style>
   </head>
+
   <body id="top">
     <header>
       <div class="logo-container">
@@ -173,6 +231,24 @@
       </div>
     </section>
 
+    <div class="container">
+      <div id="section1" class="section">
+        <img src="images/IT_images/IT1.jpg" alt="IT Image 1" />
+      </div>
+      <div id="section2" class="section">
+        <img src="images/IT_images/IT2.jpg" alt="IT Image 2" />
+      </div>
+      <div id="section3" class="section">
+        <img src="images/IT_images/IT3.jpg" alt="IT Image 3" />
+      </div>
+      <div id="section4" class="section">
+        <img src="images/IT_images/IT4.jpg" alt="IT Image 4" />
+      </div>
+      <div id="section5" class="section">
+        <img src="images/IT_images/IT5.jpg" alt="IT Image 5" />
+      </div>
+    </div>
+
     <section id="about" class="section">
       <h2>About NELTY LLC</h2>
       <p>
@@ -187,51 +263,42 @@
     <footer>
       <p>&copy; 2024 NELTY LLC. All Rights Reserved.</p>
     </footer>
+
     <div id="backToTop" style="display: none">
       <a href="#top" class="back-to-top-btn">Back To Top</a>
     </div>
-  </body>
-  <script>
-    window.onscroll = function () {
-      scrollFunction();
-    };
 
-    function scrollFunction() {
-      const backToTop = document.getElementById("backToTop");
-      if (window.pageYOffset > 100) {
-        backToTop.style.display = "block";
-      } else {
-        backToTop.style.display = "none";
-      }
-    }
+    <script>
+      // Intersection Observer to add 'visible' class for transitions
+      const sections = document.querySelectorAll('.section');
+      const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1,
+      };
 
-    document
-      .querySelector(".back-to-top-btn")
-      .addEventListener("click", function (e) {
-        e.preventDefault();
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
         });
+      }, options);
+
+      sections.forEach((section) => {
+        observer.observe(section);
       });
 
-    let currentImageIndex = 0;
-    const images = [
-      'url("images/banner-1.jpg")',
-      'url("images/banner-2.png")',
-      'url("images/banner-3.png")',
-    ];
-
-    function changeBackground() {
-      const heroSection = document.getElementById("hero");
-      heroSection.style.backgroundImage = images[currentImageIndex];
-      currentImageIndex = (currentImageIndex + 1) % images.length;
-    }
-
-    // Change the background image every 5 seconds
-    setInterval(changeBackground, 5000);
-
-    // Initially set the first image
-    window.onload = changeBackground;
-  </script>
+      // Scroll to Top Button Logic
+      const backToTop = document.getElementById('backToTop');
+      window.onscroll = function () {
+        if (window.pageYOffset > 100) {
+          backToTop.style.display = 'block';
+        } else {
+          backToTop.style.display = 'none';
+        }
+      };
+    </script>
+  </body>
 </html>
