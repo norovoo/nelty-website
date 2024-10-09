@@ -36,68 +36,141 @@
       }
 
       .section {
-        padding: 60px 20px;
-        max-width: 800px;
-        margin: auto;
-        text-align: center;
-      }
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
 
-      .section h2 {
-        margin-bottom: 20px;
-        color: #563d7c; /* Dark Purple */
-      }
+.section h2 {
+  margin-bottom: 20px;
+  color: #563d7c; /* Dark Purple */
+}
 
-      .contact-form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 20px 0;
-      }
+.section p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 40px;
+}
 
-      .form-group {
-        margin-bottom: 15px;
-        width: 100%;
-        max-width: 500px;
-      }
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f7f9fb;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto; /* Center the form */
+}
 
-      .form-group label {
-        display: block;
-        margin-bottom: 5px;
-        text-align: left;
-      }
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.form-group,
+.textarea-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
 
-      .form-group input,
-      .form-group textarea {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-      }
+.form-group label,
+.textarea-group label {
+  width: 100px; /* Ensure all labels are the same width */
+  text-align: right;
+  margin-right: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
 
-      .form-group textarea {
-        resize: vertical;
-        min-height: 100px;
-      }
+.form-group input,
+.textarea-group textarea {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
 
-      .submit-btn {
-        background-color: #f39c12; /* Accent color for the button */
-        color: white;
-        padding: 10px 20px;
-        border-radius: 5px;
-        border: none;
-        cursor: pointer;
-        font-weight: bold;
-      }
+.form-group input:focus,
+.textarea-group textarea:focus {
+  border-color: #f39c12;
+  box-shadow: 0 2px 8px rgba(243, 156, 18, 0.2);
+}
 
-      .contact-info {
-        list-style: none;
-        padding: 0;
-        margin: 20px 0;
-      }
+.submit-btn {
+  background-color: #563d7c;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 100%;
+}
 
-      .contact-info li {
-        margin: 10px 0;
-      }
+.submit-btn:hover {
+  background-color: #462c5d;
+  transform: scale(1.05);
+}
+
+.submit-btn:active {
+  transform: scale(1);
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  font-size: 16px;
+  color: #333;
+  text-align: left;
+  background-color: #f7f9fb;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.contact-info li {
+  margin-bottom: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info li a {
+  color: #563d7c;
+  text-decoration: none;
+  margin-left: 10px;
+  transition: color 0.3s ease;
+}
+
+.contact-info li a:hover {
+  color: #462c5d;
+  text-decoration: underline;
+}
+
+.contact-info li:before {
+  content: "📍"; /* Custom icon, you can replace with a different icon or font-awesome icon */
+  margin-right: 10px;
+  font-size: 18px;
+  color: #6f5b9a;
+}
 
       footer {
         text-align: center;
@@ -123,6 +196,11 @@
         text-decoration: none;
         font-weight: bold;
         display: block;
+      }
+      #map {
+        width: 100%;
+        height: 300px;
+        margin: 20px 0 120px; /* Add bottom margin to create space */
       }
 
       @media (max-width: 600px) {
@@ -167,22 +245,30 @@
 
       <div class="contact-form">
         <form action="your-backend-endpoint" method="POST">
+          <!-- Name Field -->
           <div class="form-group">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required />
           </div>
+      
+          <!-- Email Field -->
           <div class="form-group">
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required />
           </div>
-          <div class="form-group">
+      
+          <!-- Message Field -->
+          <div class="textarea-group">
             <label for="message">Message</label>
             <textarea id="message" name="message" required></textarea>
           </div>
+      
+          <!-- Submit Button -->
           <button type="submit" class="submit-btn">Send Message</button>
         </form>
       </div>
-
+      
+      
       <h3>Contact Information</h3>
       <ul class="contact-info">
         <li>
@@ -193,7 +279,7 @@
       </ul>
 
       <h3>Location</h3>
-      <div id="map" style="width: 100%; height: 300px; margin-top: 20px">
+      <div id="map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345095777!2d-87.65105268502811!3d41.875559679221045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2ca56e872e95%3A0x8e6a1ed0b9b64e6f!2sNelty%20LLC!5e0!3m2!1sen!2sus!4v1625274856143!5m2!1sen!2sus"
           width="600"
@@ -202,6 +288,7 @@
           allowfullscreen=""
           loading="lazy"
         ></iframe>
+</div>
       </div>
     </section>
 
