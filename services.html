@@ -226,48 +226,52 @@
             </button>
           </div>
         </div>
-
-        <h2 style="text-align: center">Payment Options</h2>
-        <p style="text-align: center">
-          Select your preferred payment method below:
-        </p>
-        <form id="payment-form" style="max-width: 400px; margin: auto">
-          <label for="payment-method">Choose a payment method:</label>
-          <select id="payment-method" name="payment-method">
-            <option value="credit-card">Credit Card</option>
-            <option value="paypal">PayPal</option>
-            <option value="bank-transfer">Bank Transfer</option>
-          </select>
-          <button type="submit">Proceed to Payment</button>
-        </form>
-
-        <h2 style="text-align: center">Schedule an Appointment</h2>
-        <p style="text-align: center">
-          Fill out the form below to schedule an appointment with us:
-        </p>
-        <form id="appointment-form" style="max-width: 400px; margin: auto">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
-
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-
-          <label for="service">Select Service:</label>
-          <select id="service" name="service">
-            <option value="IT Consulting">IT Consulting</option>
-            <option value="Data Management">Data Management</option>
-            <option value="AI & ML">AI & ML</option>
-            <option value="Software Development">Software Development</option>
-          </select>
-
-          <label for="date">Preferred Date:</label>
-          <input type="date" id="date" name="date" required />
-
-          <label for="time">Preferred Time:</label>
-          <input type="time" id="time" name="time" required />
-
-          <button type="submit">Schedule Appointment</button>
-        </form>
+        <div class="appointmentBooking">
+          <div class="appointmentWindow">
+            <h2 style="text-align: center">Schedule an Appointment</h2>
+            <p style="text-align: center">
+              Fill out the form below to schedule an appointment with us:
+            </p>
+            <form id="appointment-form" style="max-width: 400px; margin: auto">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required />
+    
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+    
+              <label for="service">Select Service:</label>
+              <select id="service" name="service">
+                <option value="IT Consulting">IT Consulting</option>
+                <option value="Data Management">Data Management</option>
+                <option value="AI & ML">AI & ML</option>
+                <option value="Software Development">Software Development</option>
+              </select>
+    
+              <label for="date">Preferred Date:</label>
+              <input type="date" id="date" name="date" required />
+    
+              <label for="time">Preferred Time:</label>
+              <input type="time" id="time" name="time" required />
+    
+              <button type="submit">Schedule Appointment</button>
+            </form>
+          </div>
+          <div class="paymentWindow">
+          <h2 style="text-align: center">Payment Options</h2>
+          <p style="text-align: center">
+            Select your preferred payment method below:
+          </p>
+          <form id="payment-form" style="max-width: 400px; margin: auto">
+            <label for="payment-method">Choose a payment method:</label>
+            <select id="payment-method" name="payment-method">
+              <option value="credit-card">Credit Card</option>
+              <option value="paypal">PayPal</option>
+              <option value="bank-transfer">Bank Transfer</option>
+            </select>
+            <button type="submit">Proceed to Payment</button>
+          </form>
+        </div>
+        </div>
       </div>
     </section>
 
