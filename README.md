@@ -27,19 +27,123 @@ It showcases Nelty’s services, contact information, and company details in a c
 
 ## 📁 Project Structure
 
-nelty-website/
-├── images/ # Image assets
-├── about.html # About page
-├── contact.html # Contact page
-├── index.html # Home page
-├── services.html # Services page
-├── styles.css # Global stylesheet
-├── .gitignore # Git ignored files
-├── LICENSE # License information
-└── README.md # Project documentation
+The project follows a clear and organized structure for easy maintenance and scalability:
 
-yaml
-Copy code
+```
+nelty-website/
+├── images/              # Image assets directory
+│   └── IT_images/      # IT-related imagery and icons
+│
+├── about.html          # About page - company information and team
+├── contact.html        # Contact page - forms and contact details
+├── index.html          # Home page - main landing page
+├── services.html       # Services page - IT consulting offerings
+├── mobile-menu.js      # Mobile navigation functionality
+├── styles.css          # Global stylesheet with organized sections
+├── .gitignore         # Git ignored files configuration
+├── LICENSE            # MIT License information
+└── README.md          # Project documentation
+```
+
+### 📑 Code Structure and Conventions
+
+#### HTML Files
+- Each HTML file follows a consistent structure
+- Uses semantic HTML5 elements
+- Includes proper meta tags and SEO elements
+- Follows accessibility best practices
+
+#### CSS Organization (`styles.css`)
+The stylesheet is organized into logical sections:
+1. General Styles
+2. Header & Navigation
+3. Hero Section
+4. Content Sections
+5. Service Cards
+6. Testimonials
+7. Footer
+8. Back to Top Button
+9. Mobile Navigation
+10. Responsive Design
+
+#### JavaScript (`mobile-menu.js`)
+- Handles mobile menu functionality
+- Uses event delegation for performance
+- Includes accessibility features
+- Follows clean code principles
+
+### 🎨 Naming Conventions
+
+- **HTML IDs**: Camel case (e.g., `mainNav`, `menuToggle`)
+- **CSS Classes**: Kebab case (e.g., `hero-content`, `service-cards`)
+- **File Names**: Lowercase with hyphens (e.g., `mobile-menu.js`)
+- **Image Files**: Descriptive names, lowercase with hyphens
+
+### 🛠️ Common Customizations
+
+The website is designed to be easily customizable. Here are some common modifications:
+
+#### 🎨 Changing Brand Colors
+
+```css
+/* In styles.css */
+:root {
+    --primary-color: #6a0dad;    /* Main brand color */
+    --light-color: #d8b3ff;      /* Light accent color */
+    --dark-color: #4e008e;       /* Dark accent color */
+    --bg-color: #f2f0f7;         /* Background color */
+}
+```
+
+#### 📏 Modifying Layout
+
+```css
+/* Adjust card layout */
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+/* Change section spacing */
+.section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+```
+
+#### 🔤 Typography Changes
+
+```css
+/* Update fonts */
+body {
+    font-family: 'Your-Font-Name', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Your-Heading-Font', serif;
+}
+```
+
+#### 📱 Responsive Breakpoints
+
+```css
+/* Tablet breakpoint */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+}
 
 ---
 
