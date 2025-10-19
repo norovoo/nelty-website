@@ -4,7 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Explore Services | NELTY LLC</title>
+
+    <!-- SEO Meta Tags -->
+    <title>Our Services | NELTY LLC - IT Consulting, Data, AI, ML & Software Development</title>
+    <meta name="description" content="Explore NELTY LLC's comprehensive IT services: IT Consulting, Data Management, AI & Machine Learning, and Custom Software Development. Transform your business today." />
+    <meta name="keywords" content="IT consulting services, data management solutions, AI services, machine learning consulting, custom software development, business technology services" />
+    <meta name="author" content="NELTY LLC" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Our Services | NELTY LLC - IT Consulting, Data, AI, ML & Software Development" />
+    <meta property="og:description" content="Explore NELTY LLC's comprehensive IT services: IT Consulting, Data Management, AI & Machine Learning, and Custom Software Development." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nelty.info/services.html" />
+    <meta property="og:image" content="https://nelty.info/images/nelty-logo.png" />
+    <meta property="og:site_name" content="NELTY LLC" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Our Services | NELTY LLC - IT Consulting, Data, AI, ML & Software Development" />
+    <meta name="twitter:description" content="Explore NELTY LLC's comprehensive IT services: IT Consulting, Data Management, AI & Machine Learning, and Custom Software Development." />
+    <meta name="twitter:image" content="https://nelty.info/images/nelty-logo.png" />
+
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
@@ -24,12 +44,22 @@
         color: white;
         padding: 15px 0;
         text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
 
       header a {
         color: white;
         text-decoration: none;
         margin: 0 15px;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
       }
 
       .section {
@@ -144,9 +174,9 @@
     </style>
   </head>
   <body id="top">
-    <header>
+    <header role="banner">
       <div class="logo-container">
-        <a href="/">
+        <a href="/" aria-label="NELTY LLC Home">
           <img
             src="images/nelty-logo.png"
             alt="NELTY Logo"
@@ -155,26 +185,30 @@
           />
         </a>
       </div>
-      <nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+        ☰
+      </button>
+      <nav id="mainNav">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="#services">Services</a></li>
+          <li><a href="services.html">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <section id="services" class="section">
+    <main>
+      <section id="services" class="section" aria-labelledby="services-heading">
       <div class="container">
-        <h1>Our Services</h1>
+        <h1 id="services-heading">Our Services</h1>
         <p style="text-align: center">
           At NELTY LLC, we provide a range of IT solutions designed to meet your
           business needs.
         </p>
 
-        <div class="service-cards">
-          <div class="card">
+        <div class="service-cards" role="list">
+          <article class="card" role="listitem">
             <h3>IT Consulting</h3>
             <p>
               Expert guidance to help you navigate your IT strategy and
@@ -183,11 +217,12 @@
             <button
               class="service-button"
               onclick="scheduleAppointment('IT Consulting')"
+              aria-label="Schedule appointment for IT Consulting"
             >
               Schedule Appointment
             </button>
-          </div>
-          <div class="card">
+          </article>
+          <article class="card" role="listitem">
             <h3>Data Management</h3>
             <p>
               End-to-end data solutions to manage, analyze, and secure your
@@ -196,11 +231,12 @@
             <button
               class="service-button"
               onclick="scheduleAppointment('Data Management')"
+              aria-label="Schedule appointment for Data Management"
             >
               Schedule Appointment
             </button>
-          </div>
-          <div class="card">
+          </article>
+          <article class="card" role="listitem">
             <h3>AI & ML</h3>
             <p>
               Innovative AI and machine learning solutions to automate and
@@ -209,11 +245,12 @@
             <button
               class="service-button"
               onclick="scheduleAppointment('AI & ML')"
+              aria-label="Schedule appointment for AI & ML"
             >
               Schedule Appointment
             </button>
-          </div>
-          <div class="card">
+          </article>
+          <article class="card" role="listitem">
             <h3>Software Development</h3>
             <p>
               Custom software development services to turn your ideas into
@@ -222,63 +259,70 @@
             <button
               class="service-button"
               onclick="scheduleAppointment('Software Development')"
+              aria-label="Schedule appointment for Software Development"
             >
               Schedule Appointment
             </button>
-          </div>
+          </article>
         </div>
 
-        <h2 style="text-align: center">Payment Options</h2>
-        <p style="text-align: center">
-          Select your preferred payment method below:
-        </p>
-        <form id="payment-form" style="max-width: 400px; margin: auto">
-          <label for="payment-method">Choose a payment method:</label>
-          <select id="payment-method" name="payment-method">
-            <option value="credit-card">Credit Card</option>
-            <option value="paypal">PayPal</option>
-            <option value="bank-transfer">Bank Transfer</option>
-          </select>
-          <button type="submit">Proceed to Payment</button>
-        </form>
+        <section aria-labelledby="payment-heading">
+          <h2 id="payment-heading" style="text-align: center">Payment Options</h2>
+          <p style="text-align: center">
+            Select your preferred payment method below:
+          </p>
+          <form id="payment-form" style="max-width: 400px; margin: auto" aria-label="Payment method selection">
+            <label for="payment-method">Choose a payment method:</label>
+            <select id="payment-method" name="payment-method" aria-required="true">
+              <option value="credit-card">Credit Card</option>
+              <option value="paypal">PayPal</option>
+              <option value="bank-transfer">Bank Transfer</option>
+            </select>
+            <button type="submit">Proceed to Payment</button>
+          </form>
+        </section>
 
-        <h2 style="text-align: center">Schedule an Appointment</h2>
-        <p style="text-align: center">
-          Fill out the form below to schedule an appointment with us:
-        </p>
-        <form id="appointment-form" style="max-width: 400px; margin: auto">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
+        <section aria-labelledby="appointment-heading">
+          <h2 id="appointment-heading" style="text-align: center">Schedule an Appointment</h2>
+          <p style="text-align: center">
+            Fill out the form below to schedule an appointment with us:
+          </p>
+          <form id="appointment-form" style="max-width: 400px; margin: auto" aria-label="Appointment scheduling form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required aria-required="true" />
 
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required aria-required="true" />
 
-          <label for="service">Select Service:</label>
-          <select id="service" name="service">
-            <option value="IT Consulting">IT Consulting</option>
-            <option value="Data Management">Data Management</option>
-            <option value="AI & ML">AI & ML</option>
-            <option value="Software Development">Software Development</option>
-          </select>
+            <label for="service">Select Service:</label>
+            <select id="service" name="service" aria-required="true">
+              <option value="IT Consulting">IT Consulting</option>
+              <option value="Data Management">Data Management</option>
+              <option value="AI & ML">AI & ML</option>
+              <option value="Software Development">Software Development</option>
+            </select>
 
-          <label for="date">Preferred Date:</label>
-          <input type="date" id="date" name="date" required />
+            <label for="date">Preferred Date:</label>
+            <input type="date" id="date" name="date" required aria-required="true" />
 
-          <label for="time">Preferred Time:</label>
-          <input type="time" id="time" name="time" required />
+            <label for="time">Preferred Time:</label>
+            <input type="time" id="time" name="time" required aria-required="true" />
 
-          <button type="submit">Schedule Appointment</button>
-        </form>
+            <button type="submit">Schedule Appointment</button>
+          </form>
+        </section>
       </div>
     </section>
+    </main>
 
-    <footer>
+    <footer role="contentinfo">
       <p>&copy; 2024 NELTY LLC. All Rights Reserved.</p>
     </footer>
     <div id="backToTop" style="display: none">
       <a href="#top" class="back-to-top-btn">Back To Top</a>
     </div>
 
+    <script src="mobile-menu.js"></script>
     <script>
       // Schedule appointment function
       function scheduleAppointment(service) {
