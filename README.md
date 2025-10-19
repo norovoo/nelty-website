@@ -7,20 +7,20 @@ It showcases Nelty’s services, contact information, and company details in a c
 
 ## 🚀 Features
 
-- 💡 Simple and fast static site
-- 📱 Fully responsive design
-- 🎨 Modern layout and typography
-- 🌐 SEO-friendly structure
-- 🔧 Easy to maintain and update
+- ⚡ **Fast and lightweight** — optimized for performance  
+- 📱 **Responsive design** — works seamlessly across devices  
+- 🎨 **Modern layout and typography** — clean and visually appealing  
+- 🌐 **SEO-friendly** — structured for better search engine visibility  
+- 🔧 **Easy to maintain** — simple static architecture
 
 ---
 
 ## 🛠️ Tech Stack
 
 | Category | Technologies |
-|-----------|---------------|
+|-----------|--------------|
 | **Frontend** | HTML5, CSS3, JavaScript |
-| **Styling** | Custom CSS (no framework) |
+| **Styling** | Custom CSS (no frameworks) |
 | **Deployment** | GitHub Pages / Netlify / AWS S3 |
 
 ---
@@ -33,11 +33,13 @@ nelty-website/
 ├── contact.html # Contact page
 ├── index.html # Home page
 ├── services.html # Services page
-├── styles.css # Global styles
+├── styles.css # Global stylesheet
 ├── .gitignore # Git ignored files
 ├── LICENSE # License information
 └── README.md # Project documentation
 
+yaml
+Copy code
 
 ---
 
@@ -45,19 +47,17 @@ nelty-website/
 
 To run the project locally:
 
-1. Clone the repository  
+1. **Clone the repository**
    ```bash
    git clone https://github.com/yourusername/nelty-website.git
+Open the project folder
 
-Open the folder in your editor
-
+bash
+Copy code
 cd nelty-website
-
-
-Open index.html in your browser.
+Open index.html directly in your web browser.
 
 🌍 Deployment
-
 You can deploy this website easily using:
 
 GitHub Pages
@@ -68,54 +68,52 @@ Vercel
 
 AWS S3
 
-For GitHub Pages:
+GitHub Pages Deployment
+Go to your repository’s Settings
 
-Go to your repository settings
+Navigate to Pages
 
-Under Pages, select the main branch
+Under Source, select the main branch
 
-Set the folder to /root and save
+Set the folder to /root and click Save
 
-Your site will be live at:
-https://yourusername.github.io/nelty-website
+Your website will be live at:
+👉 https://yourusername.github.io/nelty-website
 
 🧑‍💻 Contributing
-
 Contributions are welcome!
-If you’d like to suggest improvements or report a bug, open a GitHub Issue
-.
+If you’d like to suggest improvements or report a bug, open a GitHub Issue.
 
-Steps to contribute:
+Steps to Contribute
+Fork the repository
 
-Fork the repo
+Create a new branch:
 
-Create a new branch (feature/new-feature)
+bash
+Copy code
+git checkout -b feature/new-feature
+Make your changes and commit them:
 
-Commit your changes
-
-Push and open a Pull Request
+bash
+Copy code
+git commit -m "Add new feature"
+Push your changes and open a Pull Request
 
 📄 License
-
-This project is licensed under the MIT License — see the LICENSE
- file for details.
+This project is licensed under the MIT License.
+See the LICENSE file for more details.
 
 💬 Contact
-
 Nelty Team
 📧 contact@nelty.com
-
 🌐 www.nelty.com
 
-
----
-
-### 🧾 GitHub Issue Template
-
+🧾 GitHub Issue Template
 Create this file:
-📁 `.github/ISSUE_TEMPLATE/general_issue.md`
+📁 .github/ISSUE_TEMPLATE/general_issue.md
 
-```markdown
+markdown
+Copy code
 ---
 name: General Issue
 about: Report a bug, request a feature, or ask a question about the Nelty Website
@@ -126,7 +124,7 @@ assignees: ""
 
 ## 📝 Description
 
-<!-- Describe the issue or feature in detail. -->
+<!-- Provide a clear and concise description of the issue or feature request. -->
 
 ---
 
@@ -138,20 +136,23 @@ assignees: ""
 3. See error
 
 **Expected Behavior**
-<!-- What should happen? -->
+<!-- Describe what you expected to happen. -->
 
 **Actual Behavior**
-<!-- What actually happens? -->
+<!-- Describe what actually happened. -->
+
+**Screenshots or Logs (if applicable)**
+<!-- Add screenshots, console logs, or error traces. -->
 
 ---
 
 ## 🚀 Feature Request
 
 **Describe the feature you'd like**
-<!-- What new functionality do you want? -->
+<!-- What new functionality would you like to see? -->
 
 **Why is this feature needed?**
-<!-- Explain how it improves the site. -->
+<!-- Explain why this is important or beneficial. -->
 
 ---
 
@@ -167,8 +168,14 @@ assignees: ""
 
 ## ✅ Additional Context
 
-<!-- Add screenshots, notes, or other details. -->
+<!-- Add any other relevant context, screenshots, or notes. -->
 
 ---
 
 **Thank you for helping improve the Nelty Website! 💪**
+yaml
+Copy code
+
+---
+
+Would you like me to add a **Pull Request Template** (`PULL_REQUEST_TEMPLATE.md`) next — so 
