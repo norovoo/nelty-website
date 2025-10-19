@@ -94,9 +94,9 @@
     </style>
   </head>
   <body id="top">
-    <header>
+    <header role="banner">
       <div class="logo-container">
-        <a href="/">
+        <a href="/" aria-label="NELTY LLC Home">
           <img
             src="images/nelty-logo.png"
             alt="NELTY Logo"
@@ -110,38 +110,40 @@
       <nav id="mainNav">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <section id="about" class="section">
-      <h1>About NELTY LLC</h1>
-      <div class="about-content">
-        <p>
-          At NELTY LLC, we are dedicated to providing top-notch IT consulting
-          services. Our mission is to empower businesses with innovative
-          technology solutions that drive success. With expertise in Data, AI,
-          ML, and Software Development, we ensure that your organization stays
-          ahead of the competition.
-        </p>
-        <p>
-          Our team of experienced professionals is committed to understanding
-          your unique business needs and delivering tailored solutions that
-          exceed expectations. We believe in building long-lasting partnerships
-          with our clients, ensuring a collaborative approach to achieving your
-          goals.
-        </p>
-        <p>
-          Join us on a journey of innovation and growth as we navigate the
-          ever-evolving landscape of technology together.
-        </p>
-      </div>
-    </section>
+    <main>
+      <section id="about" class="section" aria-labelledby="about-heading">
+        <h1 id="about-heading">About NELTY LLC</h1>
+        <article class="about-content">
+          <p>
+            At NELTY LLC, we are dedicated to providing top-notch IT consulting
+            services. Our mission is to empower businesses with innovative
+            technology solutions that drive success. With expertise in Data, AI,
+            ML, and Software Development, we ensure that your organization stays
+            ahead of the competition.
+          </p>
+          <p>
+            Our team of experienced professionals is committed to understanding
+            your unique business needs and delivering tailored solutions that
+            exceed expectations. We believe in building long-lasting partnerships
+            with our clients, ensuring a collaborative approach to achieving your
+            goals.
+          </p>
+          <p>
+            Join us on a journey of innovation and growth as we navigate the
+            ever-evolving landscape of technology together.
+          </p>
+        </article>
+      </section>
+    </main>
 
-    <footer>
+    <footer role="contentinfo">
       <p>&copy; 2024 NELTY LLC. All Rights Reserved.</p>
     </footer>
     <div id="backToTop" style="display: none">
