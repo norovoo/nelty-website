@@ -1,46 +1,108 @@
-/* General Styles */
+/**
+ * ============================================
+ * NELTY LLC Website Stylesheet
+ * ============================================
+ *
+ * Author: NELTY LLC
+ * Description: Main stylesheet for NELTY LLC IT consulting website
+ * Version: 1.0
+ *
+ * Table of Contents:
+ * 1. General Styles
+ * 2. Header & Navigation
+ * 3. Hero Section
+ * 4. Content Sections
+ * 5. Service Cards
+ * 6. Testimonials
+ * 7. Footer
+ * 8. Back to Top Button
+ * 9. Mobile Navigation
+ * 10. Responsive Design
+ */
+
+/* ============================================
+   1. GENERAL STYLES
+   ============================================ */
+
+/**
+ * Base body styles
+ * Sets the foundational typography and layout for the entire site
+ */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f2f0f7;
+    background-color: #f2f0f7; /* Light purple background */
     color: #333;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Header */
+/* ============================================
+   2. HEADER & NAVIGATION
+   ============================================ */
+
+/**
+ * Header container
+ * Sticky header with dark purple branding
+ */
 header {
-    background-color: #6a0dad; /* Dark purple */
+    background-color: #6a0dad; /* Dark purple - primary brand color */
     padding: 20px;
 }
 
+/**
+ * Logo container
+ * Controls logo sizing and positioning
+ */
 header .logo-container img {
     width: 150px;
 }
 
+/**
+ * Main navigation menu
+ * Horizontal menu layout using flexbox
+ */
 nav ul {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
 }
 
+/**
+ * Navigation links
+ * White text with purple hover effect
+ */
 nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
 }
 
+/**
+ * Navigation link hover state
+ * Light purple color for better visual feedback
+ */
 nav ul li a:hover {
     color: #d8b3ff; /* Light purple hover effect */
 }
 
-/* Loader */
+/* ============================================
+   3. HERO SECTION
+   ============================================ */
+
+/**
+ * Page loader spinner
+ * Animated loading indicator with brand colors
+ */
 #loader .spinner {
     border: 8px solid #d8b3ff; /* Light purple */
-    border-top: 8px solid #6a0dad; /* Dark purple */
+    border-top: 8px solid #6a0dad; /* Dark purple - creates spinning effect */
 }
 
-/* Hero Section */
+/**
+ * Hero section container
+ * Full-width banner with brand colors
+ */
 #hero {
     background-color: #7d3c98; /* Medium purple */
     color: #fff;
@@ -49,16 +111,24 @@ nav ul li a:hover {
     text-align: center;
 }
 
+/**
+ * Hero content wrapper
+ * Contains headline, description, and CTA button
+ */
 .hero-content {
     position: relative;
 }
 
+/**
+ * Hero banner (alternative layout)
+ * Full-height banner with centered content
+ */
 .hero-banner {
     width: 100%;
     height: auto;
     display: block;
-    background-color: #3498db; /* Change this to your logo color */
-    color: white; /* Text color for contrast */
+    background-color: #3498db;
+    color: white;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -66,16 +136,27 @@ nav ul li a:hover {
     text-align: center;
 }
 
+/**
+ * Hero text elements
+ * Ensures text remains readable on colored backgrounds
+ */
 #hero h1, #hero p {
-    color: white; /* Ensure text is readable on the colored background */
+    color: white;
 }
 
-
+/**
+ * Hero headline
+ * Large, prominent heading
+ */
 .hero-content h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
+/**
+ * Hero text overlay (alternative layout)
+ * Centered text overlay for banner images
+ */
 .hero-text-overlay {
     position: absolute;
     top: 50%;
@@ -85,6 +166,10 @@ nav ul li a:hover {
     color: #fff;
 }
 
+/**
+ * Call-to-action button
+ * Primary button style with hover effect
+ */
 .cta-btn {
     background-color: #6a0dad;
     color: white;
@@ -94,22 +179,44 @@ nav ul li a:hover {
     transition: background-color 0.3s ease;
 }
 
+/**
+ * CTA button hover state
+ * Darker purple for visual feedback
+ */
 .cta-btn:hover {
-    background-color: #4e008e; /* Darker purple on hover */
+    background-color: #4e008e;
 }
 
-/* Section Titles */
+/* ============================================
+   4. CONTENT SECTIONS
+   ============================================ */
+
+/**
+ * Section headings
+ * Consistent heading style across all sections
+ */
 .section h2 {
     color: #6a0dad;
     text-align: center;
 }
 
-/* Service Cards */
+/* ============================================
+   5. SERVICE CARDS
+   ============================================ */
+
+/**
+ * Service cards container
+ * Flexbox layout for responsive card grid
+ */
 .service-cards {
     display: flex;
     justify-content: space-around;
 }
 
+/**
+ * Individual service card
+ * Light purple background with shadow effect
+ */
 .card {
     background-color: #d8b3ff; /* Light purple */
     padding: 20px;
@@ -119,11 +226,22 @@ nav ul li a:hover {
     text-align: center;
 }
 
+/**
+ * Service card heading
+ * Brand color for consistency
+ */
 .card h3 {
     color: #6a0dad;
 }
 
-/* Testimonial Section */
+/* ============================================
+   6. TESTIMONIALS
+   ============================================ */
+
+/**
+ * Testimonial item
+ * Individual testimonial card styling
+ */
 #testimonials .testimonial-item {
     background-color: #f2e5ff; /* Lightest purple */
     padding: 20px;
@@ -132,13 +250,24 @@ nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer */
+/* ============================================
+   7. FOOTER
+   ============================================ */
+
+/**
+ * Footer container
+ * Site-wide footer with brand colors
+ */
 footer {
     background-color: #6a0dad;
     color: white;
     text-align: center;
 }
 
+/**
+ * Contact section in footer
+ * Vertical layout for contact information
+ */
 footer .contact-us {
     display: flex;
     flex-direction: column;
@@ -146,6 +275,10 @@ footer .contact-us {
     background-color: #61399f;
 }
 
+/**
+ * Social media links container
+ * Horizontal layout with spacing
+ */
 footer .sosmed {
     display: flex;
     flex-direction: row;
@@ -154,8 +287,14 @@ footer .sosmed {
     padding-bottom: 20px;
 }
 
+/* ============================================
+   8. BACK TO TOP BUTTON
+   ============================================ */
 
-/* Back to Top Button */
+/**
+ * Back to top button
+ * Fixed position button for easy navigation
+ */
 .back-to-top {
     background-color: #6a0dad;
     color: white;
@@ -167,6 +306,10 @@ footer .sosmed {
     border-radius: 50%;
 }
 
+/**
+ * Back to top button hover state
+ * Darker shade for visual feedback
+ */
 .back-to-top:hover {
     background-color: #4e008e;
 }
