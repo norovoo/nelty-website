@@ -216,9 +216,9 @@
     </style>
   </head>
   <body id="top">
-    <header>
+    <header role="banner">
       <div class="logo-container">
-        <a href="/">
+        <a href="/" aria-label="NELTY LLC Home">
           <img
             src="images/nelty-logo.png"
             alt="NELTY Logo"
@@ -226,73 +226,78 @@
           />
         </a>
       </div>
-      <nav>
+      <nav role="navigation" aria-label="Main navigation">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <section class="section">
-      <h2>Contact Us</h2>
-      <p>
-        We would love to hear from you! Please fill out the form below or
-        contact us directly using the information provided.
-      </p>
+    <main>
+      <section class="section" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact Us</h2>
+        <p>
+          We would love to hear from you! Please fill out the form below or
+          contact us directly using the information provided.
+        </p>
 
-      <div class="contact-form">
-        <form action="your-backend-endpoint" method="POST">
-          <!-- Name Field -->
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-      
-          <!-- Email Field -->
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-      
-          <!-- Message Field -->
-          <div class="textarea-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
-          </div>
-      
-          <!-- Submit Button -->
-          <button type="submit" class="submit-btn">Send Message</button>
-        </form>
-      </div>
-      
-      
-      <h3>Contact Information</h3>
-      <ul class="contact-info">
-        <li>
-          Email: <a href="mailto:contact@nelty.info">contact@nelty.info</a>
-        </li>
-        <li>Phone: <a href="tel:+16699778228">(669) 977-8228</a></li>
-        <li>Address: 12041 Tuscany Bay Dr, Tampa, FL 33606</li>
-      </ul>
+        <div class="contact-form">
+          <form action="your-backend-endpoint" method="POST" aria-label="Contact form">
+            <!-- Name Field -->
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required aria-required="true" />
+            </div>
 
-      <h3>Location</h3>
-      <div id="map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345095777!2d-87.65105268502811!3d41.875559679221045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2ca56e872e95%3A0x8e6a1ed0b9b64e6f!2sNelty%20LLC!5e0!3m2!1sen!2sus!4v1625274856143!5m2!1sen!2sus"
-          width="600"
-          height="450"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-        ></iframe>
-</div>
-      </div>
-    </section>
+            <!-- Email Field -->
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required aria-required="true" />
+            </div>
 
-    <footer>
+            <!-- Message Field -->
+            <div class="textarea-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required aria-required="true"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn" aria-label="Send contact message">Send Message</button>
+          </form>
+        </div>
+
+        <section aria-labelledby="contact-info-heading">
+          <h3 id="contact-info-heading">Contact Information</h3>
+          <ul class="contact-info" role="list">
+            <li role="listitem">
+              Email: <a href="mailto:contact@nelty.info" aria-label="Email NELTY LLC at contact@nelty.info">contact@nelty.info</a>
+            </li>
+            <li role="listitem">Phone: <a href="tel:+16699778228" aria-label="Call NELTY LLC at (669) 977-8228">(669) 977-8228</a></li>
+            <li role="listitem">Address: 12041 Tuscany Bay Dr, Tampa, FL 33606</li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="location-heading">
+          <h3 id="location-heading">Location</h3>
+          <div id="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345095777!2d-87.65105268502811!3d41.875559679221045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2ca56e872e95%3A0x8e6a1ed0b9b64e6f!2sNelty%20LLC!5e0!3m2!1sen!2sus!4v1625274856143!5m2!1sen!2sus"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              title="NELTY LLC office location on Google Maps"
+            ></iframe>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer role="contentinfo">
       <p>&copy; 2024 NELTY LLC. All Rights Reserved.</p>
     </footer>
     <div id="backToTop" style="display: none">
