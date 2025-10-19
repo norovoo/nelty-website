@@ -27,12 +27,22 @@
         position: sticky;
         top: 0;
         z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
 
       header a {
         color: white;
         text-decoration: none;
         margin: 0 15px;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
       }
 
       .section {
@@ -226,7 +236,10 @@
           />
         </a>
       </div>
-      <nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+        ☰
+      </button>
+      <nav id="mainNav">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -298,8 +311,9 @@
     <div id="backToTop" style="display: none">
       <a href="#top" class="back-to-top-btn">Back To Top</a>
     </div>
-  </body>
-  <script>
+
+    <script src="mobile-menu.js"></script>
+    <script>
     window.onscroll = function () {
       scrollFunction();
     };
