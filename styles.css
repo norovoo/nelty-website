@@ -313,3 +313,71 @@ footer .sosmed {
 .back-to-top:hover {
     background-color: #4e008e;
 }
+
+/* Mobile Navigation Styles */
+nav ul li a {
+    padding: 10px 15px;
+    display: block;
+    min-width: 48px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    min-width: 48px;
+    min-height: 48px;
+}
+
+.menu-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    header {
+        flex-wrap: wrap;
+    }
+
+    header nav {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    header nav.active {
+        max-height: 500px;
+    }
+
+    nav ul {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        width: 100%;
+        padding: 0 !important;
+    }
+
+    nav ul li {
+        margin: 0 !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    nav ul li a {
+        padding: 15px;
+        width: 100%;
+        text-align: left;
+    }
+}
