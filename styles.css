@@ -314,6 +314,53 @@ footer .sosmed {
     background-color: #4e008e;
 }
 
+/* ============================================
+   COMMON CUSTOMIZATIONS GUIDE
+   ============================================ */
+
+/**
+ * Brand Colors:
+ * To customize the brand colors, replace these values throughout the CSS:
+ * - Primary Purple: #6a0dad
+ * - Light Purple: #d8b3ff
+ * - Darker Purple: #4e008e
+ * - Background Purple: #f2f0f7
+ * 
+ * Example:
+ * :root {
+ *     --primary-color: #6a0dad;
+ *     --light-color: #d8b3ff;
+ *     --dark-color: #4e008e;
+ *     --bg-color: #f2f0f7;
+ * }
+ */
+
+/**
+ * Typography:
+ * To change the font family:
+ * body {
+ *     font-family: 'Your-Font', sans-serif;
+ * }
+ * 
+ * Font Sizes:
+ * - Main Headings: 2.5rem
+ * - Section Headings: 2rem
+ * - Body Text: 1rem
+ */
+
+/**
+ * Layout Customization:
+ * Card Width:
+ * .card {
+ *     width: 22%; /* Adjust for different grid layouts */
+ * }
+ * 
+ * Section Spacing:
+ * .section {
+ *     padding: 80px 0; /* Adjust vertical spacing */
+ * }
+ */
+
 /* Mobile Navigation Styles */
 nav ul li a {
     padding: 10px 15px;
@@ -342,27 +389,43 @@ nav ul li a {
     border-radius: 4px;
 }
 
-/* Mobile Responsive */
+/* ============================================
+   10. RESPONSIVE DESIGN - MOBILE
+   ============================================ */
+
+/**
+ * Mobile Breakpoint: 768px
+ * Targets tablet and mobile devices
+ * Changes:
+ * - Activates hamburger menu
+ * - Switches navigation to vertical layout
+ * - Adjusts spacing and touch targets
+ */
 @media (max-width: 768px) {
+    /* Show hamburger menu toggle */
     .menu-toggle {
         display: block;
     }
 
+    /* Allow header to wrap navigation below logo */
     header {
         flex-wrap: wrap;
     }
 
+    /* Collapsible navigation menu */
     header nav {
         width: 100%;
-        max-height: 0;
+        max-height: 0; /* Hidden by default */
         overflow: hidden;
-        transition: max-height 0.3s ease;
+        transition: max-height 0.3s ease; /* Smooth animation */
     }
 
+    /* Expanded navigation state */
     header nav.active {
-        max-height: 500px;
+        max-height: 500px; /* Allows menu to expand */
     }
 
+    /* Vertical navigation list */
     nav ul {
         flex-direction: column !important;
         align-items: stretch !important;
@@ -370,11 +433,13 @@ nav ul li a {
         padding: 0 !important;
     }
 
+    /* Navigation list items */
     nav ul li {
         margin: 0 !important;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Visual separator */
     }
 
+    /* Navigation links - optimized for touch */
     nav ul li a {
         padding: 15px;
         width: 100%;
