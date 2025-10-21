@@ -353,13 +353,13 @@ footer .sosmed {
  * Card Width:
  * .card {
  *     width: 22%; /* Adjust for different grid layouts */
- * }
+ /* * } */
  * 
- * Section Spacing:
- * .section {
- *     padding: 80px 0; /* Adjust vertical spacing */
- * }
- */
+ /* * Section Spacing: */
+ .section {
+    padding: 80px 0; /* Adjust vertical spacing */
+  }
+ /* */ */
 
 /* Mobile Navigation Styles */
 nav ul li a {
