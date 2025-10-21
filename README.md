@@ -1,7 +1,7 @@
 # 🌐 Nelty Website
 
 The **Nelty Website** is a modern, responsive static website built using **HTML**, **CSS**, and **JavaScript**.  
-It showcases Nelty’s services, contact information, and company details in a clean and professional design.
+It showcases Nelty's services, contact information, and company details in a clean and professional design.
 
 ---
 
@@ -29,7 +29,7 @@ It showcases Nelty’s services, contact information, and company details in a c
 
 The project follows a clear and organized structure for easy maintenance and scalability:
 
-```
+```plaintext
 nelty-website/
 ├── images/              # Image assets directory
 │   └── IT_images/      # IT-related imagery and icons
@@ -48,13 +48,16 @@ nelty-website/
 ### 📑 Code Structure and Conventions
 
 #### HTML Files
+
 - Each HTML file follows a consistent structure
 - Uses semantic HTML5 elements
 - Includes proper meta tags and SEO elements
 - Follows accessibility best practices
 
 #### CSS Organization (`styles.css`)
+
 The stylesheet is organized into logical sections:
+
 1. General Styles
 2. Header & Navigation
 3. Hero Section
@@ -67,6 +70,7 @@ The stylesheet is organized into logical sections:
 10. Responsive Design
 
 #### JavaScript (`mobile-menu.js`)
+
 - Handles mobile menu functionality
 - Uses event delegation for performance
 - Includes accessibility features
@@ -161,125 +165,114 @@ Copy code
 cd nelty-website
 Open index.html directly in your web browser.
 
-🌍 Deployment
+## 🌍 Deployment
+
 You can deploy this website easily using:
 
-GitHub Pages
+- GitHub Pages
+- Netlify
+- Vercel
+- AWS S3
 
-Netlify
+### GitHub Pages Deployment
 
-Vercel
+1. Go to your repository's Settings
+2. Navigate to Pages
+3. Under Source, select the main branch
+4. Set the folder to /root and click Save
 
-AWS S3
-
-GitHub Pages Deployment
-Go to your repository’s Settings
-
-Navigate to Pages
-
-Under Source, select the main branch
-
-Set the folder to /root and click Save
-
-Your website will be live at:
+Your website will be live at:  
 👉 https://yourusername.github.io/nelty-website
 
-🧑‍💻 Contributing
-Contributions are welcome!
-If you’d like to suggest improvements or report a bug, open a GitHub Issue.
+## 🧑‍💻 Contributing
 
-Steps to Contribute
-Fork the repository
+Contributions are welcome! If you'd like to suggest improvements or report a bug, please open a GitHub Issue.
 
-Create a new branch:
+### Steps to Contribute
 
-bash
-Copy code
-git checkout -b feature/new-feature
-Make your changes and commit them:
+1. Fork the repository
+2. Create a new branch:
+   ```bash
+   git checkout -b feature/new-feature
+   ```
+3. Make your changes and commit them:
+   ```bash
+   git commit -m "Add new feature"
+   ```
+4. Push your changes and open a Pull Request
 
-bash
-Copy code
-git commit -m "Add new feature"
-Push your changes and open a Pull Request
+## 📄 License
 
-📄 License
-This project is licensed under the MIT License.
+This project is licensed under the MIT License.  
 See the LICENSE file for more details.
 
-💬 Contact
-Nelty Team
-📧 contact@nelty.com
-🌐 www.nelty.com
+## 💬 Contact
 
-🧾 GitHub Issue Template
-Create this file:
-📁 .github/ISSUE_TEMPLATE/general_issue.md
+**Nelty Team**  
+📧 Email: [contact@nelty.com](mailto:contact@nelty.com)  
+🌐 Website: [www.nelty.com](https://www.nelty.com)
 
-markdown
-Copy code
----
+## 🧾 Issue Templates
+
+We provide a standard issue template for bug reports and feature requests. You can find it at:  
+`.github/ISSUE_TEMPLATE/general_issue.md`
+
+### General Issue Template
+
+```yaml
 name: General Issue
 about: Report a bug, request a feature, or ask a question about the Nelty Website
-title: "[Issue]"
+title: "[Issue] "
 labels: "triage"
 assignees: ""
 ---
 
-## 📝 Description
+### 📝 Description
 
-<!-- Provide a clear and concise description of the issue or feature request. -->
+<!-- Provide a clear and concise description of the issue or feature request -->
 
----
+### 🪲 Bug Report
 
-## 🪲 Bug Report
+#### Steps to Reproduce
 
-**Steps to Reproduce**
 1. Go to '...'
 2. Click on '...'
 3. See error
 
-**Expected Behavior**
-<!-- Describe what you expected to happen. -->
+#### Expected Behavior
 
-**Actual Behavior**
-<!-- Describe what actually happened. -->
+<!-- Describe what you expected to happen -->
 
-**Screenshots or Logs (if applicable)**
-<!-- Add screenshots, console logs, or error traces. -->
+#### Actual Behavior
 
----
+<!-- Describe what actually happened -->
 
-## 🚀 Feature Request
+#### Screenshots or Logs
 
-**Describe the feature you'd like**
+<!-- Add screenshots, console logs, or error traces if applicable -->
+
+### 🚀 Feature Request
+
+#### Desired Feature
+
 <!-- What new functionality would you like to see? -->
 
-**Why is this feature needed?**
-<!-- Explain why this is important or beneficial. -->
+#### Justification
+
+<!-- Explain why this feature is important or beneficial -->
+
+### 💻 Environment
+
+| Detail  | Value                          |
+|---------|--------------------------------|
+| Browser | e.g., Chrome 120, Safari 17    |
+| OS      | e.g., macOS, Windows 11        |
+| Device  | e.g., Laptop, iPhone, Android  |
+
+### ✅ Additional Context
+
+<!-- Add any other relevant context, screenshots, or notes -->
 
 ---
-
-## 💻 Environment
-
-| Detail | Value |
-|--------|--------|
-| Browser | e.g., Chrome 120, Safari 17 |
-| OS | e.g., macOS, Windows 11 |
-| Device | e.g., Laptop, iPhone, Android |
-
----
-
-## ✅ Additional Context
-
-<!-- Add any other relevant context, screenshots, or notes. -->
-
----
-
-**Thank you for helping improve the Nelty Website! 💪**
-yaml
-Copy code
-
----
-
-Would you like me to add a **Pull Request Template** (`PULL_REQUEST_TEMPLATE.md`) next — so 
+Thank you for helping improve the Nelty Website! 💪
+```
