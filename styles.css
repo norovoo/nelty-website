@@ -446,3 +446,110 @@ nav ul li a {
         text-align: left;
     }
 }
+
+/* ==========================
+   HEADER & NAVIGATION
+   ========================== */
+
+/* Header container */
+header {
+    background-color: #6a0dad; /* Dark purple */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* For mobile wrap */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+header .logo-container img {
+    width: 160px;
+    height: auto;
+    display: block;
+}
+
+/* Main nav */
+nav {
+    display: flex;
+    align-items: center;
+    transition: max-height 0.3s ease;
+}
+
+/* Navigation list */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Nav links */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect */
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #d8b3ff; /* Light purple */
+}
+
+/* Hamburger menu button (mobile) */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 8px;
+}
+
+/* Mobile menu open */
+nav.active {
+    max-height: 500px; /* Smooth expand */
+}
+
+/* ==========================
+   RESPONSIVE - MOBILE
+   ========================== */
+@media (max-width: 768px) {
+    /* Show hamburger menu */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Navigation menu collapses */
+    nav {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        flex-direction: column;
+    }
+
+    /* Vertical navigation list */
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+
+    nav ul li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    nav ul li a {
+        padding: 12px 20px;
+        width: 100%;
+        text-align: left;
+    }
+}
