@@ -1,386 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-    <!-- SEO Meta Tags -->
-    <title>Our Services | NELTY LLC - IT Consulting, Data, AI, ML & Software Development</title>
-    <meta name="description" content="Explore NELTY LLC's comprehensive IT services: IT Consulting, Data Management, AI & Machine Learning, and Custom Software Development. Transform your business today." />
-    <meta name="keywords" content="IT consulting services, data management solutions, AI services, machine learning consulting, custom software development, business technology services" />
-    <meta name="author" content="NELTY LLC" />
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Our Services | NELTY LLC - IT Consulting, Data, AI, ML & Software Development" />
-    <meta property="og:description" content="Explore NELTY LLC's comprehensive IT services: IT Consulting, Data Management, AI & Machine Learning, and Custom Software Development." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://nelty.info/services.html" />
-    <meta property="og:image" content="https://nelty.info/images/nelty-logo.png" />
-    <meta property="og:site_name" content="NELTY LLC" />
-
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Our Services | NELTY LLC - IT Consulting, Data, AI, ML & Software Development" />
-    <meta name="twitter:description" content="Explore NELTY LLC's comprehensive IT services: IT Consulting, Data Management, AI & Machine Learning, and Custom Software Development." />
-    <meta name="twitter:image" content="https://nelty.info/images/nelty-logo.png" />
-
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        font-family: "Roboto", sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f8f9fa;
-        color: #343a40;
-      }
-
-      header {
-        background-color: #563d7c; /* Dark Purple */
-        color: white;
-        padding: 15px 0;
-        text-align: center;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      header a {
-        color: white;
-        text-decoration: none;
-        margin: 0 15px;
-      }
-
-      nav ul {
-        list-style: none;
-        display: flex;
-        margin: 0;
-        padding: 0;
-      }
-
-      .section {
-        padding: 60px 20px;
-        max-width: 800px;
-        margin: auto;
-      }
-
-      .section h1 {
-        color: #563d7c; /* Dark Purple */
-        text-align: center;
-        margin-bottom: 20px;
-      }
-
-      .service-cards {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        gap: 20px;
-      }
-
-      .card {
-        background-color: white;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        width: calc(50% - 40px);
-        text-align: center;
-        transition: transform 0.3s;
-      }
-
-      .card:hover {
-        transform: translateY(-5px);
-      }
-
-      .service-button {
-        background-color: #563d7c; /* Dark Purple */
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-
-      .service-button:hover {
-        background-color: #452a5b; /* Lighter Purple */
-      }
-
-      form {
-        margin-top: 40px;
-        background-color: white;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-
-      form label {
-        display: block;
-        margin: 10px 0 5px;
-      }
-
-      form input,
-      form select {
-        width: calc(100% - 20px);
-        padding: 10px;
-        margin-bottom: 15px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-      }
-
-      form button {
-        background-color: #563d7c; /* Dark Purple */
-        color: white;
-        border: none;
-        padding: 10px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-        width: 100%;
-      }
-
-      form button:hover {
-        background-color: #452a5b; /* Lighter Purple */
-      }
-
-      footer {
-        text-align: center;
-        padding: 15px 0;
-        background-color: #563d7c; /* Dark Purple */
-        color: white;
-        position: relative;
-        bottom: 0;
-        width: 100%;
-      }
-      #backToTop {
-        position: fixed;
-        bottom: 50px;
-        right: 20px;
-        z-index: 100;
-      }
-
-      .back-to-top-btn {
-        background-color: #563d7c;
-        color: white;
-        padding: 10px 20px;
-        border-radius: 15px;
-        text-decoration: none;
-        font-weight: bold;
-        display: block;
-      }
-    </style>
-  </head>
-  <body id="top">
-    <header role="banner">
-      <div class="logo-container">
-        <a href="/" aria-label="NELTY LLC Home">
-          <img
-            src="images/nelty-logo.png"
-            alt="NELTY Logo"
-            style="max-width: 200px"
-            loading="eager"
-          />
-        </a>
-      </div>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
-        ☰
-      </button>
-      <nav id="mainNav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <main>
-      <section id="services" class="section" aria-labelledby="services-heading">
-      <div class="container">
-        <h1 id="services-heading">Our Services</h1>
-        <p style="text-align: center">
-          At NELTY LLC, we provide a range of IT solutions designed to meet your
-          business needs.
-        </p>
-
-        <div class="service-cards" role="list">
-          <article class="card" role="listitem">
-            <h3>IT Consulting</h3>
-            <p>
-              Expert guidance to help you navigate your IT strategy and
-              infrastructure needs.
-            </p>
-            <button
-              class="service-button"
-              onclick="scheduleAppointment('IT Consulting')"
-              aria-label="Schedule appointment for IT Consulting"
-            >
-              Schedule Appointment
-            </button>
-          </article>
-          <article class="card" role="listitem">
-            <h3>Data Management</h3>
-            <p>
-              End-to-end data solutions to manage, analyze, and secure your
-              business data.
-            </p>
-            <button
-              class="service-button"
-              onclick="scheduleAppointment('Data Management')"
-              aria-label="Schedule appointment for Data Management"
-            >
-              Schedule Appointment
-            </button>
-          </article>
-          <article class="card" role="listitem">
-            <h3>AI & ML</h3>
-            <p>
-              Innovative AI and machine learning solutions to automate and
-              optimize your processes.
-            </p>
-            <button
-              class="service-button"
-              onclick="scheduleAppointment('AI & ML')"
-              aria-label="Schedule appointment for AI & ML"
-            >
-              Schedule Appointment
-            </button>
-          </article>
-          <article class="card" role="listitem">
-            <h3>Software Development</h3>
-            <p>
-              Custom software development services to turn your ideas into
-              reality.
-            </p>
-            <button
-              class="service-button"
-              onclick="scheduleAppointment('Software Development')"
-              aria-label="Schedule appointment for Software Development"
-            >
-              Schedule Appointment
-            </button>
-          </article>
-        </div>
-
-        <section aria-labelledby="payment-heading">
-          <h2 id="payment-heading" style="text-align: center">Payment Options</h2>
-          <p style="text-align: center">
-            Select your preferred payment method below:
-          </p>
-          <form id="payment-form" style="max-width: 400px; margin: auto" aria-label="Payment method selection">
-            <label for="payment-method">Choose a payment method:</label>
-            <select id="payment-method" name="payment-method" aria-required="true">
-              <option value="credit-card">Credit Card</option>
-              <option value="paypal">PayPal</option>
-              <option value="bank-transfer">Bank Transfer</option>
-            </select>
-            <button type="submit">Proceed to Payment</button>
-          </form>
-        </section>
-
-        <section aria-labelledby="appointment-heading">
-          <h2 id="appointment-heading" style="text-align: center">Schedule an Appointment</h2>
-          <p style="text-align: center">
-            Fill out the form below to schedule an appointment with us:
-          </p>
-          <form id="appointment-form" style="max-width: 400px; margin: auto" aria-label="Appointment scheduling form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required aria-required="true" />
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required aria-required="true" />
-
-            <label for="service">Select Service:</label>
-            <select id="service" name="service" aria-required="true">
-              <option value="IT Consulting">IT Consulting</option>
-              <option value="Data Management">Data Management</option>
-              <option value="AI & ML">AI & ML</option>
-              <option value="Software Development">Software Development</option>
-            </select>
-
-            <label for="date">Preferred Date:</label>
-            <input type="date" id="date" name="date" required aria-required="true" />
-
-            <label for="time">Preferred Time:</label>
-            <input type="time" id="time" name="time" required aria-required="true" />
-
-            <button type="submit">Schedule Appointment</button>
-          </form>
-        </section>
-      </div>
-    </section>
-    </main>
-
-    <footer role="contentinfo">
-      <p>&copy; 2024 NELTY LLC. All Rights Reserved.</p>
-    </footer>
-    <div id="backToTop" style="display: none">
-      <a href="#top" class="back-to-top-btn">Back To Top</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Our Services | NELTY LLC</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body id="top">
+  <!-- HEADER -->
+  <header>
+    <div class="logo-container">
+      <a href="/"><img src="images/nelty-logo.png" alt="NELTY Logo" /></a>
     </div>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <nav id="mainNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <script src="mobile-menu.js"></script>
-    <script>
-      // Schedule appointment function
-      function scheduleAppointment(service) {
-        document
-          .getElementById("appointment-form")
-          .querySelector('select[name="service"]').value = service;
-        document
-          .getElementById("appointment-form")
-          .scrollIntoView({ behavior: "smooth" });
-      }
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="section" id="services">
+      <h1>Our Services</h1>
+      <p style="text-align:center;">At NELTY LLC, we provide a range of IT solutions designed to meet your business needs.</p>
 
-      // Handle form submissions
-      document
-        .getElementById("payment-form")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-          alert("Payment processed for " + this.payment - method.value);
-        });
+      <div class="service-cards">
+        <article class="card">
+          <h3>IT Consulting</h3>
+          <p>Expert guidance to help you navigate your IT strategy and infrastructure needs.</p>
+        </article>
+        <article class="card">
+          <h3>Data Management</h3>
+          <p>End-to-end data solutions to manage, analyze, and secure your business data.</p>
+        </article>
+        <article class="card">
+          <h3>AI & ML</h3>
+          <p>Innovative AI and machine learning solutions to automate and optimize your processes.</p>
+        </article>
+        <article class="card">
+          <h3>Software Development</h3>
+          <p>Custom software development services to turn your ideas into reality.</p>
+        </article>
+      </div>
 
-      document
-        .getElementById("appointment-form")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-          alert(
-            "Appointment scheduled for " +
-              this.name.value +
-              " on " +
-              this.date.value +
-              " at " +
-              this.time.value
-          );
-        });
-    </script>
-  </body>
+      <!-- Payment Section -->
+      <section>
+        <h2 style="text-align:center;">Payment Options</h2>
+        <p style="text-align:center;">Select your preferred payment method below:</p>
+        <form style="max-width:400px;margin:auto;">
+          <label for="payment-method">Choose a payment method:</label>
+          <select id="payment-method" name="payment-method" required>
+            <option value="credit-card">Credit Card</option>
+            <option value="paypal">PayPal</option>
+            <option value="bank-transfer">Bank Transfer</option>
+          </select>
+          <button type="submit">Proceed to Payment</button>
+        </form>
+      </section>
+
+      <!-- Appointment Section -->
+      <section>
+        <h2 style="text-align:center;">Schedule an Appointment</h2>
+        <p style="text-align:center;">Fill out the form below to schedule an appointment with us:</p>
+        <form id="appointment-form" style="max-width:400px;margin:auto;">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="service">Select Service:</label>
+          <select id="service" name="service" required>
+            <option value="IT Consulting">IT Consulting</option>
+            <option value="Data Management">Data Management</option>
+            <option value="AI & ML">AI & ML</option>
+            <option value="Software Development">Software Development</option>
+          </select>
+
+          <label for="date">Preferred Date:</label>
+          <input type="date" id="date" name="date" required />
+
+          <label for="time">Preferred Time:</label>
+          <input type="time" id="time" name="time" required />
+
+          <button type="submit">Schedule Appointment</button>
+        </form>
+      </section>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2024 NELTY LLC. All Rights Reserved.</p>
+  </footer>
+
+  <!-- BACK TO TOP BUTTON -->
+  <div id="backToTop" style="display:none;">
+    <a href="#top" class="back-to-top-btn">Back To Top</a>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="mobile-menu.js"></script>
   <script>
-    window.onscroll = function () {
-      scrollFunction();
+    // Hamburger menu toggle
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+    menuToggle.addEventListener("click", () => mainNav.classList.toggle("active"));
+
+    // Back to top
+    window.onscroll = function() {
+      const backToTop = document.getElementById("backToTop");
+      backToTop.style.display = (window.pageYOffset > 100) ? "block" : "none";
     };
 
-    function scrollFunction() {
-      const backToTop = document.getElementById("backToTop");
-      // Trigger the button when scrolled down 100px from the top of the document
-      if (window.pageYOffset > 100) {
-        backToTop.style.display = "block";
-      } else {
-        backToTop.style.display = "none";
-      }
-    }
+    document.querySelector(".back-to-top-btn").addEventListener("click", e => {
+      e.preventDefault();
+      window.scrollTo({top:0, behavior:"smooth"});
+    });
 
-    // Smooth scroll to the top when clicking on the button
-    document
-      .querySelector(".back-to-top-btn")
-      .addEventListener("click", function (e) {
-        e.preventDefault();
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      });
+    // Appointment form
+    document.getElementById("appointment-form").addEventListener("submit", e => {
+      e.preventDefault();
+      alert(`Appointment scheduled for ${e.target.name.value} on ${e.target.date.value} at ${e.target.time.value}`);
+    });
   </script>
+</body>
 </html>

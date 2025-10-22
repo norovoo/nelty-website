@@ -1,448 +1,231 @@
-/**
- * ============================================
- * NELTY LLC Website Stylesheet
- * ============================================
- *
- * Author: NELTY LLC
- * Description: Main stylesheet for NELTY LLC IT consulting website
- * Version: 1.0
- *
- * Table of Contents:
- * 1. General Styles
- * 2. Header & Navigation
- * 3. Hero Section
- * 4. Content Sections
- * 5. Service Cards
- * 6. Testimonials
- * 7. Footer
- * 8. Back to Top Button
- * 9. Mobile Navigation
- * 10. Responsive Design
- */
-
 /* ============================================
-   1. GENERAL STYLES
+   NELTY LLC Website Stylesheet
    ============================================ */
 
-/**
- * Base body styles
- * Sets the foundational typography and layout for the entire site
- */
+/* ---------------------------
+   1. GENERAL STYLES
+---------------------------- */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f2f0f7; /* Light purple background */
+    background-color: #f2f0f7; /* Soft background */
     color: #333;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
 }
 
-/* ============================================
+h1, h2, h3 {
+    color: #6a0dad; /* Dark Purple */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+p {
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ---------------------------
    2. HEADER & NAVIGATION
-   ============================================ */
-
-/**
- * Header container
- * Sticky header with dark purple branding
- */
+---------------------------- */
 header {
-    background-color: #6a0dad; /* Dark purple - primary brand color */
-    padding: 20px;
+    background-color: #6a0dad;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-/**
- * Logo container
- * Controls logo sizing and positioning
- */
 header .logo-container img {
     width: 150px;
 }
 
-/**
- * Main navigation menu
- * Horizontal menu layout using flexbox
- */
 nav ul {
-    list-style-type: none;
+    list-style: none;
     display: flex;
-    justify-content: space-around;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
 }
 
-/**
- * Navigation links
- * White text with purple hover effect
- */
 nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-}
-
-/**
- * Navigation link hover state
- * Light purple color for better visual feedback
- */
-nav ul li a:hover {
-    color: #d8b3ff; /* Light purple hover effect */
-}
-
-/* ============================================
-   3. HERO SECTION
-   ============================================ */
-
-/**
- * Page loader spinner
- * Animated loading indicator with brand colors
- */
-#loader .spinner {
-    border: 8px solid #d8b3ff; /* Light purple */
-    border-top: 8px solid #6a0dad; /* Dark purple - creates spinning effect */
-}
-
-/**
- * Hero section container
- * Full-width banner with brand colors
- */
-#hero {
-    background-color: #7d3c98; /* Medium purple */
-    color: #fff;
-    position: relative;
-    padding: 80px 0;
-    text-align: center;
-}
-
-/**
- * Hero content wrapper
- * Contains headline, description, and CTA button
- */
-.hero-content {
-    position: relative;
-}
-
-/**
- * Hero banner (alternative layout)
- * Full-height banner with centered content
- */
-.hero-banner {
-    width: 100%;
-    height: auto;
-    display: block;
-    background-color: #3498db;
-    color: white;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-/**
- * Hero text elements
- * Ensures text remains readable on colored backgrounds
- */
-#hero h1, #hero p {
-    color: white;
-}
-
-/**
- * Hero headline
- * Large, prominent heading
- */
-.hero-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-/**
- * Hero text overlay (alternative layout)
- * Centered text overlay for banner images
- */
-.hero-text-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff;
-}
-
-/**
- * Call-to-action button
- * Primary button style with hover effect
- */
-.cta-btn {
-    background-color: #6a0dad;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-/**
- * CTA button hover state
- * Darker purple for visual feedback
- */
-.cta-btn:hover {
-    background-color: #4e008e;
-}
-
-/* ============================================
-   4. CONTENT SECTIONS
-   ============================================ */
-
-/**
- * Section headings
- * Consistent heading style across all sections
- */
-.section h2 {
-    color: #6a0dad;
-    text-align: center;
-}
-
-/* ============================================
-   5. SERVICE CARDS
-   ============================================ */
-
-/**
- * Service cards container
- * Flexbox layout for responsive card grid
- */
-.service-cards {
-    display: flex;
-    justify-content: space-around;
-}
-
-/**
- * Individual service card
- * Light purple background with shadow effect
- */
-.card {
-    background-color: #d8b3ff; /* Light purple */
-    padding: 20px;
-    border-radius: 8px;
-    width: 22%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-/**
- * Service card heading
- * Brand color for consistency
- */
-.card h3 {
-    color: #6a0dad;
-}
-
-/* ============================================
-   6. TESTIMONIALS
-   ============================================ */
-
-/**
- * Testimonial item
- * Individual testimonial card styling
- */
-#testimonials .testimonial-item {
-    background-color: #f2e5ff; /* Lightest purple */
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* ============================================
-   7. FOOTER
-   ============================================ */
-
-/**
- * Footer container
- * Site-wide footer with brand colors
- */
-footer {
-    background-color: #6a0dad;
-    color: white;
-    text-align: center;
-}
-
-/**
- * Contact section in footer
- * Vertical layout for contact information
- */
-footer .contact-us {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #61399f;
-}
-
-/**
- * Social media links container
- * Horizontal layout with spacing
- */
-footer .sosmed {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 40px;
-    padding-bottom: 20px;
-}
-
-/* ============================================
-   8. BACK TO TOP BUTTON
-   ============================================ */
-
-/**
- * Back to top button
- * Fixed position button for easy navigation
- */
-.back-to-top {
-    background-color: #6a0dad;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    border-radius: 50%;
-}
-
-/**
- * Back to top button hover state
- * Darker shade for visual feedback
- */
-.back-to-top:hover {
-    background-color: #4e008e;
-}
-
-/* ============================================
-   COMMON CUSTOMIZATIONS GUIDE
-   ============================================ */
-
-/**
- * Brand Colors:
- * To customize the brand colors, replace these values throughout the CSS:
- * - Primary Purple: #6a0dad
- * - Light Purple: #d8b3ff
- * - Darker Purple: #4e008e
- * - Background Purple: #f2f0f7
- * 
- * Example:
- * :root {
- *     --primary-color: #6a0dad;
- *     --light-color: #d8b3ff;
- *     --dark-color: #4e008e;
- *     --bg-color: #f2f0f7;
- * }
- */
-
-/**
- * Typography:
- * To change the font family:
- * body {
- *     font-family: 'Your-Font', sans-serif;
- * }
- * 
- * Font Sizes:
- * - Main Headings: 2.5rem
- * - Section Headings: 2rem
- * - Body Text: 1rem
- */
-
-/**
- * Layout Customization:
- * Card Width:
- * .card {
- *     width: 22%; /* Adjust for different grid layouts */
- * }
- * 
- * Section Spacing:
- * .section {
- *     padding: 80px 0; /* Adjust vertical spacing */
- * }
- */
-
-/* Mobile Navigation Styles */
-nav ul li a {
     padding: 10px 15px;
-    display: block;
-    min-width: 48px;
-    min-height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    transition: color 0.3s;
 }
 
+nav ul li a:hover {
+    color: #d8b3ff; /* Light purple hover */
+}
+
+/* Hamburger menu */
 .menu-toggle {
     display: none;
     background: none;
     border: none;
     color: white;
-    font-size: 24px;
+    font-size: 28px;
     cursor: pointer;
+}
+
+/* ---------------------------
+   3. SECTIONS
+---------------------------- */
+.section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ---------------------------
+   4. SERVICE CARDS
+---------------------------- */
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: #d8b3ff; /* Light purple */
+    padding: 25px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.card p {
+    font-size: 1rem;
+}
+
+/* ---------------------------
+   5. FORMS
+---------------------------- */
+form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-top: 30px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+form input, form select {
+    width: 100%;
     padding: 10px;
-    min-width: 48px;
-    min-height: 48px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
 }
 
-.menu-toggle:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
+form button {
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    transition: background-color 0.3s;
 }
 
-/* ============================================
-   10. RESPONSIVE DESIGN - MOBILE
-   ============================================ */
+form button:hover {
+    background-color: #4e008e;
+}
 
-/**
- * Mobile Breakpoint: 768px
- * Targets tablet and mobile devices
- * Changes:
- * - Activates hamburger menu
- * - Switches navigation to vertical layout
- * - Adjusts spacing and touch targets
- */
+/* ---------------------------
+   6. FOOTER
+---------------------------- */
+footer {
+    background-color: #6a0dad;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 60px;
+}
+
+/* ---------------------------
+   7. BACK TO TOP BUTTON
+---------------------------- */
+.back-to-top-btn {
+    background-color: #6a0dad;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.back-to-top-btn:hover {
+    background-color: #4e008e;
+}
+
+/* ---------------------------
+   8. RESPONSIVE DESIGN
+---------------------------- */
 @media (max-width: 768px) {
-    /* Show hamburger menu toggle */
     .menu-toggle {
         display: block;
     }
 
-    /* Allow header to wrap navigation below logo */
-    header {
-        flex-wrap: wrap;
-    }
-
-    /* Collapsible navigation menu */
-    header nav {
-        width: 100%;
-        max-height: 0; /* Hidden by default */
-        overflow: hidden;
-        transition: max-height 0.3s ease; /* Smooth animation */
-    }
-
-    /* Expanded navigation state */
-    header nav.active {
-        max-height: 500px; /* Allows menu to expand */
-    }
-
-    /* Vertical navigation list */
     nav ul {
-        flex-direction: column !important;
-        align-items: stretch !important;
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
         width: 100%;
-        padding: 0 !important;
     }
 
-    /* Navigation list items */
+    nav.active ul {
+        max-height: 500px;
+    }
+
     nav ul li {
-        margin: 0 !important;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Visual separator */
+        border-bottom: 1px solid rgba(255,255,255,0.2);
     }
 
-    /* Navigation links - optimized for touch */
     nav ul li a {
         padding: 15px;
-        width: 100%;
         text-align: left;
+        width: 100%;
+    }
+
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
     }
 }
