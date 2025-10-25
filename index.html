@@ -5,25 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!-- SEO Meta Tags -->
     <title>NELTY LLC | IT Consulting, Data, AI, ML & Software Development</title>
-    <meta name="description" content="NELTY LLC provides top-notch IT consulting services with expertise in Data, AI, ML, and Software Development. Transform your business with innovative technology solutions." />
-    <meta name="keywords" content="IT consulting, data management, artificial intelligence, machine learning, software development, technology solutions, business IT services, NELTY LLC" />
+    <meta
+      name="description"
+      content="NELTY LLC provides top-notch IT consulting services with expertise in Data, AI, ML, and Software Development. Transform your business with innovative technology solutions."
+    />
+    <meta
+      name="keywords"
+      content="IT consulting, data management, artificial intelligence, machine learning, software development, technology solutions, business IT services, NELTY LLC"
+    />
     <meta name="author" content="NELTY LLC" />
 
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="NELTY LLC | IT Consulting, Data, AI, ML & Software Development" />
-    <meta property="og:description" content="Leading IT consulting services with expertise in Data, AI, ML, and Software Development. Empower your business with innovative technology solutions." />
+    <meta
+      property="og:title"
+      content="NELTY LLC | IT Consulting, Data, AI, ML & Software Development"
+    />
+    <meta
+      property="og:description"
+      content="Leading IT consulting services with expertise in Data, AI, ML, and Software Development. Empower your business with innovative technology solutions."
+    />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://nelty.info/" />
-    <meta property="og:image" content="https://nelty.info/images/nelty-logo.png" />
+    <meta
+      property="og:image"
+      content="https://nelty.info/images/nelty-logo.png"
+    />
     <meta property="og:site_name" content="NELTY LLC" />
 
-    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="NELTY LLC | IT Consulting, Data, AI, ML & Software Development" />
-    <meta name="twitter:description" content="Leading IT consulting services with expertise in Data, AI, ML, and Software Development. Empower your business with innovative technology solutions." />
-    <meta name="twitter:image" content="https://nelty.info/images/nelty-logo.png" />
+    <meta
+      name="twitter:title"
+      content="NELTY LLC | IT Consulting, Data, AI, ML & Software Development"
+    />
+    <meta
+      name="twitter:description"
+      content="Leading IT consulting services with expertise in Data, AI, ML, and Software Development. Empower your business with innovative technology solutions."
+    />
+    <meta
+      name="twitter:image"
+      content="https://nelty.info/images/nelty-logo.png"
+    />
 
     <link rel="stylesheet" href="styles.css" />
     <link
@@ -31,6 +52,7 @@
       rel="stylesheet"
     />
     <style>
+      /* --- GLOBAL STYLES --- */
       body {
         font-family: "Roboto", sans-serif;
         margin: 0;
@@ -40,10 +62,11 @@
         scroll-behavior: smooth;
       }
 
+      /* --- HEADER / NAVBAR STYLES --- */
       header {
-        background-color: #3b5998; /* Blue color */
+        background-color: #563d7c; /* Professional purple theme */
         color: #fff;
-        padding: 15px 0;
+        padding: 10px 5%;
         position: sticky;
         top: 0;
         z-index: 1000;
@@ -55,6 +78,8 @@
 
       header .logo-container img {
         max-width: 80px;
+        height: auto;
+        display: block;
       }
 
       header nav ul {
@@ -65,7 +90,7 @@
       }
 
       header nav ul li {
-        margin: 0 15px;
+        margin: 0 5px;
       }
 
       header nav ul li a {
@@ -79,6 +104,22 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        border-radius: 5px;
+        /* NEW: Subtle opacity for inactive links */
+        opacity: 0.8;
+        transition: opacity 0.3s ease, background-color 0.3s ease;
+      }
+
+      /* NEW: Elegant hover effect - no bg */
+      header nav ul li a:hover {
+        opacity: 1;
+        font-weight: 700; /* Added weight on hover for emphasis */
+      }
+
+      /* NEW: Style for the current page link - no bg shadow */
+      header nav ul li a[aria-current="page"] {
+        opacity: 1; /* Fully visible */
+        font-weight: 700;
       }
 
       /* Hamburger Menu Button */
@@ -92,7 +133,6 @@
         padding: 10px;
         min-width: 48px;
         min-height: 48px;
-        margin-right: 15px;
       }
 
       .menu-toggle:hover {
@@ -100,7 +140,7 @@
         border-radius: 4px;
       }
 
-      /* Hero Section */
+      /* --- HERO SECTION --- */
       #hero {
         background-image: url("images/banner-1.jpg");
         background-size: cover;
@@ -156,6 +196,7 @@
         background-color: #d35400;
       }
 
+      /* --- CONTENT SECTIONS --- */
       .section {
         padding: 60px 20px;
         max-width: 1600px;
@@ -169,24 +210,65 @@
         max-width: 90%;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        margin: 20px auto
+        margin: 20px auto;
       }
 
       .visible {
         opacity: 1;
       }
 
-      footer {
-        background-color: #563d7c;
-        color: white;
-        text-align: center;
-        /* padding: 15px 0; */
-        position: relative;
-        width: 100%;
-        box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-      }
+      /* --- FOOTER STYLES --- */
+   /* --- FOOTER STYLES --- */
+footer {
+  background-color: #563d7c;
+  color: white;
+  padding: 40px 5%;
+  position: relative;
+  width: 100%;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 60px;
+}
 
-      /* Back to Top Button */
+/* NEW: Mobile-first container */
+footer .container {
+  display: flex;
+  flex-direction: column; /* Stacked by default */
+  align-items: center;
+  gap: 20px; /* Space between stacked items */
+  max-width: 1600px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  order: 2; /* Copyright text appears second on mobile */
+  text-align: center; /* Ensure copyright is centered */
+}
+
+.sosmed {
+  display: flex;
+  gap: 20px;
+  order: 1; /* Icons appear first on mobile */
+}
+
+.sosmed a {
+  color: white;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.sosmed a:hover {
+  opacity: 0.75;
+  transform: translateY(-2px);
+}
+
+.sosmed svg {
+  fill: currentColor;
+  width: 28px;
+  height: 28px;
+}
+      /* --- BACK TO TOP BUTTON --- */
       #backToTop {
         position: fixed;
         bottom: 50px;
@@ -202,9 +284,14 @@
         border-radius: 15px;
         text-decoration: none;
         font-weight: bold;
+        transition: background-color 0.3s ease;
       }
 
-      /* Media Queries */
+      .back-to-top-btn:hover {
+        background-color: #452a5b;
+      }
+
+      /* --- MEDIA QUERIES --- */
       @media (max-width: 768px) {
         .hero-content h1 {
           font-size: 2.5rem;
@@ -221,6 +308,7 @@
 
         header {
           flex-wrap: wrap;
+          padding: 10px 20px;
         }
 
         header nav {
@@ -259,7 +347,20 @@
         .section img {
           max-width: 90%;
         }
-      }
+
+        /* Mobile Footer */
+        footer .container {
+    flex-direction: row; /* Go horizontal */
+    justify-content: space-between; /* Spread them out */
+  }
+
+  footer p {
+    order: 1; /* Copyright first */
+  }
+
+  .sosmed {
+    order: 2; /* Icons second */
+  }
 
       @media (max-width: 480px) {
         .hero-content h1 {
@@ -289,7 +390,11 @@
           />
         </a>
       </div>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Toggle navigation menu"
+      >
         ☰
       </button>
       <nav id="mainNav">
@@ -306,68 +411,102 @@
       <div class="hero-content">
         <h1>Innovating Technology for Your Business</h1>
         <p>Leading in IT Consulting, Data, AI, ML, and Software Development</p>
-        <a href="services.html" class="cta-btn" aria-label="Explore our services">Explore Services</a>
+        <a href="services.html" class="cta-btn" aria-label="Explore our services"
+          >Explore Services</a
+        >
       </div>
     </section>
 
-    <div class="container">
-      <div id="section1" class="section">
-        <img src="images/IT_images/IT1.jpg" alt="IT Image 1" loading="lazy" />
-      </div>
-      <div id="section2" class="section">
-        <img src="images/IT_images/IT2.jpg" alt="IT Image 2" loading="lazy" />
-      </div>
-      <div id="section3" class="section">
-        <img src="images/IT_images/IT3.jpg" alt="IT Image 3" loading="lazy" />
-      </div>
-      <div id="section4" class="section">
-        <img src="images/IT_images/IT4.jpg" alt="IT Image 4" loading="lazy" />
-      </div>
-      <div id="section5" class="section">
-        <img src="images/IT_images/IT5.jpg" alt="IT Image 5" loading="lazy" />
-      </div>
-
-      <section id="about" class="section" aria-labelledby="about-heading">
-        <h2 id="about-heading">About NELTY LLC</h2>
-        <p>
-          Dedicated to providing top-notch IT consulting services with a focus on
-          Data, AI, ML, and Software Development. Our experienced team ensures
-          that your business stays ahead of the curve with the latest technology
-          solutions.
-        </p>
-        <a href="about.html" class="cta-btn" aria-label="Learn more about NELTY LLC">Learn More</a>
-      </section>
-    </main>
-
-    <footer role="contentinfo">
-      <section class="contact-us" aria-labelledby="contact-heading">
-          <h3 id="contact-heading">For further information, please contact me via the contact listed.</h3>
-          <div class="sosmed" role="navigation" aria-label="Social media links">
-              <!-- Facebook -->
-              <a href="#" class="facebook-icon" aria-label="Visit our Facebook page">
-                  <svg role="img" fill="aqua" width="32" height="32" class="facebook-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                      <title>Facebook</title>
-                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                  </svg>
-              </a>
-              <a href="#" class="twitter-icon" aria-label="Visit our Twitter page">
-                  <svg role="img" fill="aqua" width="32" height="32" class="twitter-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                      <title>Twitter</title>
-                      <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                  </svg>
-              </a>
-              <a href="#" class="instagram-icon" aria-label="Visit our Instagram page">
-                  <svg role="img" fill="aqua" width="32" height="32" class="instagram-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                      <title>Instagram</title>
-                      <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
-                  </svg>
-              </a>
-          </div>
-      </section>
+    <main>
       <div class="container">
-        <p>&copy; 2024 NELTY LLC. All Rights Reserved.</p>
+        <div id="section1" class="section">
+          <img src="images/IT_images/IT1.jpg" alt="IT Image 1" loading="lazy" />
+        </div>
+        <div id="section2" class="section">
+          <img src="images/IT_images/IT2.jpg" alt="IT Image 2" loading="lazy" />
+        </div>
+        <div id="section3" class="section">
+          <img src="images/IT_images/IT3.jpg" alt="IT Image 3" loading="lazy" />
+        </div>
+        <div id="section4" class="section">
+          <img src="images/IT_images/IT4.jpg" alt="IT Image 4" loading="lazy" />
+        </div>
+        <div id="section5" class="section">
+          <img src="images/IT_images/IT5.jpg" alt="IT Image 5" loading="lazy" />
+        </div>
+
+        <section id="about" class="section" aria-labelledby="about-heading">
+          <h2 id="about-heading">About NELTY LLC</h2>
+          <p>
+            Dedicated to providing top-notch IT consulting services with a focus
+            on Data, AI, ML, and Software Development. Our experienced team
+            ensures that your business stays ahead of the curve with the latest
+          </p>
+          <a
+            href="about.html"
+            class="cta-btn"
+            aria-label="Learn more about NELTY LLC"
+            >Learn More</a
+          >
+        </section>
       </div>
-    </footer>
+    </main>
+<footer role="contentinfo">
+  <div class="container">
+    <p>&copy; 2024 NELTY LLC. All Rights Reserved.</p>
+
+    <div class="sosmed" role="navigation" aria-label="Social media links">
+      <a href="#" class="facebook-icon" aria-label="Visit our Facebook page">
+        <svg
+          role="img"
+          width="32"
+          height="32"
+          class="facebook-svg"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <title>Facebook</title>
+          <path
+            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+          />
+        </svg>
+      </a>
+      <a href="#" class="twitter-icon" aria-label="Visit our Twitter page">
+        <svg
+          role="img"
+          width="32"
+          height="32"
+          class="twitter-svg"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <title>Twitter</title>
+          <path
+            d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+          />
+        </svg>
+      </a>
+      <a href="#" class="instagram-icon" aria-label="Visit our Instagram page">
+        <svg
+          role="img"
+          width="32"
+          height="32"
+          class="instagram-svg"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <title>Instagram</title>
+          <path
+            d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
 
     <div id="backToTop" style="display: none">
       <a href="#top" class="back-to-top-btn">Back To Top</a>
@@ -376,17 +515,17 @@
     <script src="mobile-menu.js"></script>
     <script>
       // Intersection Observer to add 'visible' class for transitions
-      const sections = document.querySelectorAll('.section');
+      const sections = document.querySelectorAll(".section");
       const options = {
         root: null,
-        rootMargin: '0px',
+        rootMargin: "0px",
         threshold: 0.1,
       };
 
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+            entry.target.classList.add("visible");
             observer.unobserve(entry.target);
           }
         });
@@ -397,12 +536,12 @@
       });
 
       // Scroll to Top Button Logic
-      const backToTop = document.getElementById('backToTop');
+      const backToTop = document.getElementById("backToTop");
       window.onscroll = function () {
         if (window.pageYOffset > 100) {
-          backToTop.style.display = 'block';
+          backToTop.style.display = "block";
         } else {
-          backToTop.style.display = 'none';
+          backToTop.style.display = "none";
         }
       };
     </script>
